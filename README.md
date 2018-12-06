@@ -1,0 +1,108 @@
+Alfa Laboratory UI Presets
+==========================
+
+[![npm][npm-img]][npm]
+[![license][license-img]][license]
+[![travis][travis-img]][travis]
+
+[license]:         https://opensource.org/licenses/MIT
+[license-img]:     https://img.shields.io/badge/License-MIT-brightgreen.svg
+[npm-img]:         https://img.shields.io/npm/v/arui-presets-lint.svg
+[npm]:             https://www.npmjs.org/package/arui-presets-lint
+[travis]:          https://travis-ci.org/alfa-laboratory/arui-presets-lint?branch=master
+[travis-img]:      https://img.shields.io/travis/alfa-laboratory/arui-presets-lint/master.svg?label=unix
+
+<br />
+
+Набор конфигурационных файлов для валидации проектов, основанных на [arui-feather](https://github.com/alfa-laboratory/arui-feather).
+
+Установка
+---------
+```
+npm install arui-presets-lint --save-dev
+```
+
+Или, если вы используете yarn:
+```
+yarn add arui-presets-lint --dev
+```
+
+Использование линтеров
+----------------------
+
+#### commitlint
+Вы можете унаследовать конфигурацию вашего commitlint от `arui-presets/commitlint`.
+
+
+Файл `commitlint.config.js` вашего проекта:
+```js
+module.exports = {
+    extends: ['arui-presets/commitlint']
+};
+```
+
+
+#### eslint
+Вы можете унаследовать конфигурацию вашего eslint от `arui-presets/eslint`.
+К сожалению, разработчики eslint [очень нехотят](https://github.com/eslint/eslint/issues/3458) делать полноценную систему для общих конфигураций, так что вам 
+необходимо так же установить `peerDependencies`.
+
+```
+npm install eslint eslint-config-airbnb eslint-plugin-class-methods-use-this-regexp \
+  eslint-plugin-import eslint-plugin-jsdoc eslint-plugin-jsx-a11y eslint-plugin-react \
+  eslint-plugin-sort-class-members eslint-plugin-chai-friendly --save-dev
+```
+
+
+Файл `.eslintrc.js` вашего проекта:
+```js
+module.exports = {
+    extends: require.resolve('arui-presets/eslint')
+};
+```
+
+#### stylelint
+Вы можете унаследовать конфигурацию вашего stylelint от `arui-presets/stylelint`.
+
+
+Файл `stylelint.config.js` вашего проекта:
+```js
+module.exports = {
+    extends: 'arui-presets/stylelint'
+};
+```
+
+В зависимостях этого проекта уже имеются stylelint и eslint с нужными наборами плагинов, поэтому
+для использования валидации достаточно добавить в "scripts" вашего package.json
+```
+"lint-css": "stylelint ./src/**/*.css",
+"lint-js": "eslint ./src/ --ext .js,.jsx",
+"lint": "npm run lint-css && npm run lint-js",
+```
+
+Лицензия
+--------
+
+```
+The MIT License (MIT)
+
+Copyright (c) 2017 Alfa Laboratory
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+```
