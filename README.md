@@ -31,19 +31,19 @@ yarn add arui-presets-lint --dev
 ----------------------
 
 #### commitlint
-Вы можете унаследовать конфигурацию вашего commitlint от `arui-presets/commitlint`.
+Вы можете унаследовать конфигурацию вашего commitlint от `arui-presets-lint/commitlint`.
 
 
 Файл `commitlint.config.js` вашего проекта:
 ```js
 module.exports = {
-    extends: ['arui-presets/commitlint']
+    extends: ['./node_modules/arui-presets-lint/commitlint']
 };
 ```
 
 
 #### eslint
-Вы можете унаследовать конфигурацию вашего eslint от `arui-presets/eslint`.
+Вы можете унаследовать конфигурацию вашего eslint от `arui-presets-lint/eslint`.
 К сожалению, разработчики eslint [очень нехотят](https://github.com/eslint/eslint/issues/3458) делать полноценную систему для общих конфигураций, так что вам 
 необходимо так же установить `peerDependencies`.
 
@@ -57,18 +57,18 @@ npm install eslint eslint-config-airbnb eslint-plugin-class-methods-use-this-reg
 Файл `.eslintrc.js` вашего проекта:
 ```js
 module.exports = {
-    extends: require.resolve('arui-presets/eslint')
+    extends: require.resolve('arui-presets-lint/eslint')
 };
 ```
 
 #### stylelint
-Вы можете унаследовать конфигурацию вашего stylelint от `arui-presets/stylelint`.
+Вы можете унаследовать конфигурацию вашего stylelint от `arui-presets-lint/stylelint`.
 
 
 Файл `stylelint.config.js` вашего проекта:
 ```js
 module.exports = {
-    extends: 'arui-presets/stylelint'
+    extends: 'arui-presets-lint/stylelint'
 };
 ```
 
