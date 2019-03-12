@@ -1,10 +1,9 @@
 module.exports = {
-    extends: [
-        'airbnb'
-    ],
     parser: 'babel-eslint',
+    extends: ['airbnb'],
     parserOptions: {
-        ecmaVersion: 7,
+        ecmaVersion: 2018,
+        sourceType: 'module',
         ecmaFeatures: {
             jsx: true
         }
@@ -24,57 +23,108 @@ module.exports = {
     },
     plugins: [
         'chai-friendly',
-        'class-methods-use-this-regexp',
-        'jsdoc',
         'sort-class-members'
     ],
     rules: {
-        'class-methods-use-this': 0,
-        'class-methods-use-this-regexp/class-methods-use-this': [2, {
+        // Style Guide
+        'brace-style': ['warn', '1tbs', { allowSingleLine: false }],
+        camelcase: ['warn', { properties: 'never' }],
+        'comma-dangle': ['error', 'never'],
+        curly: ['warn', 'all'],
+        'func-names': 'off',
+        'function-paren-newline': 'off',
+        'implicit-arrow-linebreak': ['warn', 'beside'],
+        indent: ['error', 4, { SwitchCase: 1 }],
+        'jsx-quotes': ['error', 'prefer-single'],
+        'max-len': ['error', 120, 4, {
+            ignoreUrls: true,
+            ignoreComments: true,
+            ignoreRegExpLiterals: true,
+            ignoreStrings: true,
+            ignoreTemplateLiterals: true
+        }],
+        'multiline-comment-style': ['warn', 'starred-block'],
+        'no-multiple-empty-lines': ['warn', { max: 1, maxBOF: 0, maxEOF: 1 }],
+        'no-negated-condition': 'warn',
+        'no-plusplus': ['error', { allowForLoopAfterthoughts: true }],
+        'no-underscore-dangle': 'off',
+        'object-curly-newline': ['warn', { // TODO: delete after update airbnb config
+            ObjectExpression: { minProperties: 4, multiline: true, consistent: true },
+            ObjectPattern: { minProperties: 4, multiline: true, consistent: true },
+            ImportDeclaration: { minProperties: 4, multiline: true, consistent: true },
+            ExportDeclaration: { minProperties: 4, multiline: true, consistent: true }
+        }],
+        'operator-linebreak': ['warn', 'after', {
+            overrides: {
+                '?': 'before',
+                ':': 'before',
+                '=': 'none'
+            }
+        }],
+        'padded-blocks': 'off',
+        'padding-line-between-statements': [
+            'warn',
+            { blankLine: 'always', prev: '*', next: 'return' },
+            { blankLine: 'always', prev: ['const', 'let', 'var'], next: '*' },
+            { blankLine: 'any', prev: ['const', 'let', 'var'], next: ['const', 'let', 'var'] }
+        ],
+        'prefer-object-spread': 'off', // TODO: enable after update eslint
+
+        // Best Practices
+        'class-methods-use-this': ['warn', { // TODO: delete after update airbnb config
             exceptMethods: [
-                'blur',
-                'render*',
+                'render',
                 'getInitialState',
                 'getDefaultProps',
+                'getChildContext',
                 'componentWillMount',
+                'UNSAFE_componentWillMount',
                 'componentDidMount',
                 'componentWillReceiveProps',
+                'UNSAFE_componentWillReceiveProps',
                 'shouldComponentUpdate',
                 'componentWillUpdate',
+                'UNSAFE_componentWillUpdate',
                 'componentDidUpdate',
                 'componentWillUnmount',
-                'componentDidCatch'
+                'componentDidCatch',
+                'getSnapshotBeforeUpdate'
             ]
         }],
-        'chai-friendly/no-unused-expressions': 2,
-        'comma-dangle': [2, 'never'],
-        'default-case': 0,
-        'func-names': 0,
-        'function-paren-newline': 0,
-        indent: [2, 4, { SwitchCase: 1 }],
-        'jsdoc/newline-after-description': 2,
-        'jsx-quotes': [2, 'prefer-single'],
-        'max-len': [2, 120, 4, { ignoreComments: true }],
-        'no-param-reassign': 0,
-        'no-plusplus': [2, { allowForLoopAfterthoughts: true }],
-        'no-shadow': 0,
-        'no-unused-expressions': 0,
-        'prefer-arrow-callback': 0,
-        'prefer-const': 0,
-        'react/jsx-boolean-value': [2, 'always'],
-        'react/jsx-curly-spacing': [2, { when: 'always', children: true }],
-        'react/jsx-filename-extension': [2, { extensions: ['.jsx'] }],
-        'react/jsx-indent': [2, 4],
-        'react/jsx-indent-props': [2, 4],
-        'react/jsx-no-target-blank': 2,
-        'react/no-unused-prop-types': 0,
-        'react/prefer-stateless-function': 0,
-        'react/require-default-props': 0,
-        'react/sort-comp': 0,
+        'default-case': 'off',
+        'no-param-reassign': 'off',
+        'no-unused-expressions': 'off',
+
+        // Variables
+        'no-shadow': 'off',
+        'no-use-before-define': ['error', { functions: false, classes: true, variables: true }],
+
+        // ES6
+        'prefer-arrow-callback': 'warn',
+        'prefer-const': ['warn', { destructuring: 'any' }],
+
+        // React
+        'react/jsx-boolean-value': ['error', 'always'],
+        'react/jsx-curly-spacing': ['error', { when: 'always', children: true }],
+        'react/jsx-filename-extension': ['error', { extensions: ['.jsx'] }],
+        'react/jsx-indent': ['error', 4],
+        'react/jsx-indent-props': ['error', 4],
+        'react/jsx-no-target-blank': 'error',
+        'react/no-unused-prop-types': 'off',
+        'react/prefer-stateless-function': 'off',
+        'react/require-default-props': 'off',
+        'react/sort-comp': 'off',
+
+        // A11Y
         'jsx-a11y/href-no-hash': 'off',
         'jsx-a11y/anchor-is-valid': ['warn', { aspects: ['invalidHref'] }],
         'jsx-a11y/label-has-for': ['error', { components: ['label'], allowChildren: true }],
-        'sort-class-members/sort-class-members': [2, {
+
+        // Import
+        'import/prefer-default-export': 'off',
+
+        // Sort class members
+        'sort-class-members/sort-class-members': ['error', {
             order: [
                 '[static-properties]',
                 '[static-methods]',
@@ -115,15 +165,8 @@ module.exports = {
             },
             accessorPairPositioning: 'getThenSet'
         }],
-        'valid-jsdoc': [2, {
-            matchDescription: '(.+\\.)|^$',
-            prefer: { return: 'returns' },
-            preferType: {
-                boolean: 'Boolean', number: 'Number', object: 'Object', string: 'String'
-            },
-            requireReturn: false,
-            requireReturnDescription: false
-        }],
-        'no-use-before-define': ['error', { functions: false }]
+
+        // Chai
+        'chai-friendly/no-unused-expressions': 'error'
     }
 };
