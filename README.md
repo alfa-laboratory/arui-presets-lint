@@ -18,11 +18,7 @@ Alfa Laboratory UI Presets
 
 Установка
 ---------
-```
-npm install arui-presets-lint --save-dev
-```
-
-Или, если вы используете yarn:
+В качестве пакетного менеджера, проект использует yarn:
 ```
 yarn add arui-presets-lint --dev
 ```
@@ -48,9 +44,8 @@ module.exports = {
 необходимо так же установить `peerDependencies`.
 
 ```
-npm install eslint eslint-config-airbnb eslint-plugin-class-methods-use-this-regexp \
-  eslint-plugin-import eslint-plugin-jsdoc eslint-plugin-jsx-a11y eslint-plugin-react \
-  eslint-plugin-sort-class-members eslint-plugin-chai-friendly --save-dev
+yarn add eslint eslint-config-airbnb eslint-plugin-react eslint-plugin-import eslint-plugin-jsx-a11y \
+  eslint-plugin-sort-class-members eslint-plugin-chai-friendly --dev
 ```
 
 
