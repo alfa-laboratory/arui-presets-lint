@@ -505,6 +505,11 @@ arrify@^1.0.1:
   resolved "https://registry.yarnpkg.com/arrify/-/arrify-1.0.1.tgz#898508da2226f380df904728456849c1501a4b0d"
   integrity sha1-iYUI2iIm84DfkEcoRWhJwVAaSw0=
 
+arui-cssvars@1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/arui-cssvars/-/arui-cssvars-1.1.1.tgz#86385efe2fb71ff17af110cb179f9a2a1012294a"
+  integrity sha512-LHIZsiYynOu1VV6tkDpwsy5ciih3IT8kA9NjauVCBsHvTsn0fWMR4ynlGFf6juj09vZ2pHRls9je/73QHSoNFg==
+
 asn1@~0.2.3:
   version "0.2.4"
   resolved "https://registry.yarnpkg.com/asn1/-/asn1-0.2.4.tgz#8d2475dfab553bb33e77b54e59e880bb8ce23136"

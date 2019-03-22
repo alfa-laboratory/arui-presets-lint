@@ -1,5 +1,6 @@
 module.exports = {
     rules: {
+        'arui-cssvars/use-variables': true,
         'at-rule-empty-line-before': [
             'always',
             {
@@ -126,5 +127,8 @@ module.exports = {
         'value-list-comma-newline-after': 'always-multi-line',
         'value-list-comma-space-after': 'always-single-line',
         'value-list-comma-space-before': 'never'
-    }
+    },
+    plugins: [
+        './node_modules/arui-cssvars/lint/stylelint.js'
+    ]
 };
