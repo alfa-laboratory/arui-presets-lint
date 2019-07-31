@@ -43,7 +43,7 @@ module.exports = {
             ignoreStrings: true,
             ignoreTemplateLiterals: true
         }],
-        'multiline-comment-style': ['warn', 'starred-block'],
+        'multiline-comment-style': 'off',
         'no-multiple-empty-lines': ['warn', { max: 1, maxBOF: 0, maxEOF: 1 }],
         'no-negated-condition': 'warn',
         'no-plusplus': ['error', { allowForLoopAfterthoughts: true }],
