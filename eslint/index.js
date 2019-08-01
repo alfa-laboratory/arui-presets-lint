@@ -34,7 +34,8 @@ module.exports = {
         'func-names': 'off',
         'function-paren-newline': 'off',
         'implicit-arrow-linebreak': ['warn', 'beside'],
-        indent: ['error', 4, { SwitchCase: 1 }],
+        // breaks indent for generics
+        indent: 'off',
         'jsx-quotes': ['error', 'prefer-single'],
         'max-len': ['error', 120, 4, {
             ignoreUrls: true,
