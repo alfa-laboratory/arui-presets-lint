@@ -44,8 +44,7 @@ module.exports = {
 необходимо так же установить `peerDependencies`.
 
 ```
-yarn add eslint eslint-config-airbnb eslint-plugin-react eslint-plugin-import eslint-plugin-jsx-a11y \
-  eslint-plugin-sort-class-members eslint-plugin-chai-friendly --dev
+yarn add eeslint eslint-config-airbnb eslint-import-resolver-typescript eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react eslint-plugin-react-hooks --dev
 ```
 
 
@@ -73,6 +72,48 @@ module.exports = {
 "lint-css": "stylelint ./src/**/*.css",
 "lint-js": "eslint ./src/ --ext .js,.jsx",
 "lint": "npm run lint-css && npm run lint-js",
+```
+
+#### prettier
+Файл `package.json` вашего проекта:
+```
+...
+    "prettier": "arui-presets-lint/prettier",
+...
+```
+
+Для корректной работы с правилами линтера рекомендуется использовать `prettier-eslint`
+```
+yarn add prettier-eslint --dev
+```
+
+Файл `package.json`:
+```
+...
+    "scripts": {
+        "format": "prettier-eslint --write \"./src/**/*.{ts,tsx,js,jsx,css}\""
+    },
+...
+```
+
+Автоматическое форматирование на прекомит хуке возможно с помощью пакетов `lint-staged` и `husky`.
+Конфигурация в `package.json`:
+
+```
+...
+    "lint-staged": {
+        "concurrent": true,
+        "linters": {
+            "src/**/*.{js,jsx,ts,tsx}": ["prettier-eslint --write", "git add", "eslint"],
+            "*.css": ["prettier-eslint --write", "git add", "stylelint"]
+        }
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "yarn lint-staged",
+        }
+    },
+...
 ```
 
 Лицензия

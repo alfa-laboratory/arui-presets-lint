@@ -4,14 +4,9 @@ module.exports = {
         'at-rule-empty-line-before': [
             'always',
             {
-                except: [
-                    'blockless-after-same-name-blockless',
-                    'first-nested'
-                ],
-                ignore: [
-                    'after-comment'
-                ]
-            }
+                except: ['blockless-after-same-name-blockless', 'first-nested'],
+                ignore: ['after-comment'],
+            },
         ],
         'at-rule-name-case': 'lower',
         'at-rule-name-space-after': 'always-single-line',
@@ -30,28 +25,18 @@ module.exports = {
         'comment-empty-line-before': [
             'always',
             {
-                except: [
-                    'first-nested'
-                ],
-                ignore: [
-                    'stylelint-commands'
-                ]
-            }
+                except: ['first-nested'],
+                ignore: ['stylelint-commands'],
+            },
         ],
         'comment-no-empty': true,
         'comment-whitespace-inside': 'always',
         'custom-property-empty-line-before': [
             'always',
             {
-                except: [
-                    'after-custom-property',
-                    'first-nested'
-                ],
-                ignore: [
-                    'after-comment',
-                    'inside-single-line-block'
-                ]
-            }
+                except: ['after-custom-property', 'first-nested'],
+                ignore: ['after-comment', 'inside-single-line-block'],
+            },
         ],
         'declaration-bang-space-after': 'never',
         'declaration-bang-space-before': 'always',
@@ -96,13 +81,9 @@ module.exports = {
         'rule-empty-line-before': [
             'always-multi-line',
             {
-                except: [
-                    'first-nested'
-                ],
-                ignore: [
-                    'after-comment'
-                ]
-            }
+                except: ['first-nested'],
+                ignore: ['after-comment'],
+            },
         ],
         'selector-attribute-brackets-space-inside': 'never',
         'selector-attribute-operator-space-after': 'never',
@@ -126,9 +107,7 @@ module.exports = {
         'unit-no-unknown': true,
         'value-list-comma-newline-after': 'always-multi-line',
         'value-list-comma-space-after': 'always-single-line',
-        'value-list-comma-space-before': 'never'
+        'value-list-comma-space-before': 'never',
     },
-    plugins: [
-        './node_modules/arui-cssvars/lint/stylelint.js'
-    ]
+    plugins: ['./node_modules/arui-cssvars/lint/stylelint.js'],
 };

@@ -14,26 +14,27 @@
     "stylelint": "9.2.0"
   },
   "peerDependencies": {
-    "eslint": ">= 4.19.0",
-    "eslint-config-airbnb": ">= 16.1.0",
-    "eslint-plugin-chai-friendly": ">= 0.4.1",
-    "eslint-plugin-import": ">= 2.11.0",
-    "eslint-plugin-jsx-a11y": ">= 6.0.3",
-    "eslint-plugin-react": ">= 7.7.0",
-    "eslint-plugin-sort-class-members": ">= 1.3.0"
+    "eslint": ">= 6.5.0",
+    "eslint-config-airbnb": ">= 18.0.0",
+    "eslint-import-resolver-typescript": ">= 2.0.0",
+    "eslint-plugin-import": ">= 2.18.2",
+    "eslint-plugin-jsx-a11y": ">= 6.2.3",
+    "eslint-plugin-react": ">= 7.16.0",
+    "eslint-plugin-react-hooks": ">= 2.2.0"
   },
   "devDependencies": {
     "conventional-changelog-cli": "1.3.21",
     "conventional-github-releaser": "2.0.2",
-    "eslint": "^4.19.1",
-    "eslint-config-airbnb": "^16.1.0",
-    "eslint-plugin-chai-friendly": "^0.4.1",
-    "eslint-plugin-import": "^2.12.0",
-    "eslint-plugin-jsx-a11y": "^6.0.3",
-    "eslint-plugin-react": "^7.9.1",
-    "eslint-plugin-sort-class-members": "^1.3.1",
+    "eslint": "6.5.1",
+    "eslint-config-airbnb": "18.0.1",
+    "eslint-import-resolver-typescript": "2.0.0",
+    "eslint-plugin-import": "2.18.2",
+    "eslint-plugin-jsx-a11y": "6.2.3",
+    "eslint-plugin-react": "7.16.0",
+    "eslint-plugin-react-hooks": "2.2.0",
     "husky": "0.14.3",
-    "lint-staged": "7.0.4"
+    "lint-staged": "9.4.2",
+    "prettier-eslint-cli": "^5.0.0"
   },
   "scripts": {
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
@@ -48,14 +49,19 @@
     "test": "yarn test:eslint && yarn test:stylelint",
     "test:eslint": "eslint ./test/js-input.jsx",
     "test:stylelint": "node ./test/stylelint-test.js",
-    "version": "git fetch --tags && npm run changelog && git add CHANGELOG.md"
+    "version": "git fetch --tags && npm run changelog && git add CHANGELOG.md",
+    "format": "prettier-eslint --write \"./{eslint,stylelint,test,commitlint}/**/*.{ts,tsx,js,jsx,css}\""
   },
   "lint-staged": {
-    "*.js": [
+    "**/*.js": [
+      "prettier-eslint --write",
+      "git add",
       "eslint"
     ],
     "stylelint/*.js": [
-      "npm run test:stylelint"
+      "prettier-eslint --write",
+      "git add",
+      "yarn test:stylelint"
     ]
   },
   "repository": {
@@ -64,5 +70,6 @@
   },
   "bugs": {
     "url": "https://github.com/alfa-laboratory/arui-presets-lint/issues"
-  }
+  },
+  "prettier": "./prettier"
 }

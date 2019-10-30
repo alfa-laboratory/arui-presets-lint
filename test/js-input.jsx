@@ -4,7 +4,6 @@ function cn(target) {
     return target;
 }
 
-
 @cn('answer-giver')
 class AnswersGiver {
     question = 'The answer to the ultimate question of life, the universe and everything is';
@@ -23,4 +22,3 @@ console.log(babelCore.version); // eslint-disable-line no-console
 function definedAfterUsage() {
     console.log('Because it is normal!'); // eslint-disable-line no-console
 }
-
