@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 const stylelint = require('stylelint');
 const fs = require('fs');
 const path = require('path');
@@ -10,7 +11,7 @@ stylelint
         code: cssFile,
         config: stylelintConfig,
     })
-    .then((result) => {
+    .then(result => {
         if (result.errored) {
             console.log(result.output); // eslint-disable-line no-console
             process.exit(-1);

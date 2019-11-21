@@ -6,7 +6,8 @@ function cn(target) {
 
 @cn('answer-giver')
 class AnswersGiver {
-    question = 'The answer to the ultimate question of life, the universe and everything is';
+    question =
+        'The answer to the ultimate question of life, the universe and everything is';
 
     getAnswer() {
         return `${this.question} 42`;

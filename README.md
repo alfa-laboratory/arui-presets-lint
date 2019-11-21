@@ -40,11 +40,12 @@ module.exports = {
 
 #### eslint
 Вы можете унаследовать конфигурацию вашего eslint от `arui-presets-lint/eslint`.
-К сожалению, разработчики eslint [очень нехотят](https://github.com/eslint/eslint/issues/3458) делать полноценную систему для общих конфигураций, так что вам 
+К сожалению, разработчики eslint [очень не хотят](https://github.com/eslint/eslint/issues/3458) делать полноценную систему для общих конфигураций, так что вам 
 необходимо так же установить `peerDependencies`.
 
 ```
-yarn add eeslint eslint-config-airbnb eslint-import-resolver-typescript eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react eslint-plugin-react-hooks --dev
+yarn add eslint eslint-config-airbnb eslint-import-resolver-typescript eslint-plugin-import eslint-plugin-jsx-a11y\
+ eslint-plugin-react eslint-plugin-react-hooks @typescript-eslint/eslint-plugin --dev
 ```
 
 
