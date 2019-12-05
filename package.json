@@ -67,7 +67,7 @@
   "husky": {
     "hooks": {
       "pre-commit": "yarn test",
-      "commitmsg": "commitlint -e"
+      "commit-msg": "commitlint -e"
     }
   }
 }
