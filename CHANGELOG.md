@@ -1,3 +1,8 @@
+<a name="2.0.0"></a>
+# [2.0.0](https://github.com/alfa-laboratory/arui-presets-lint/compare/v1.2.1...v2.0.0) (2019-12-06)
+
+
+
 <a name="1.2.1"></a>
 ## [1.2.1](https://github.com/alfa-laboratory/arui-presets-lint/compare/v1.1.0...v1.2.1) (2019-09-03)
 
