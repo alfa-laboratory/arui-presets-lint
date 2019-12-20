@@ -7,7 +7,7 @@
   "dependencies": {
     "@commitlint/cli": "^8.2.0",
     "@commitlint/config-conventional": "^8.2.0",
-    "arui-cssvars": "1.1.2",
+    "arui-cssvars": "1.1.5",
     "babel-eslint": "^10.0.1",
     "case-sensitive-paths-webpack-plugin": "2.1.1",
     "command-line-args": "5.0.2",
