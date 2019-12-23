@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import babelCore from 'stylelint';
 
 function cn(target) {
@@ -17,9 +18,9 @@ class AnswersGiver {
 const giver = new AnswersGiver();
 definedAfterUsage();
 
-console.log(giver.getAnswer()); // eslint-disable-line no-console
-console.log(babelCore.version); // eslint-disable-line no-console
+console.log(giver.getAnswer());
+console.log(babelCore.version);
 
 function definedAfterUsage() {
-    console.log('Because it is normal!'); // eslint-disable-line no-console
+    console.log('Because it is normal!');
 }
