@@ -57,6 +57,11 @@
       "npm run test:stylelint"
     ]
   },
+  "resolutions": {
+    "set-value": ">=2.0.1",
+    "js-yaml": ">=3.13.1",
+    "braces": ">=2.3.1"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/alfa-laboratory/arui-presets-lint.git"
