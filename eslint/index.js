@@ -36,18 +36,13 @@ module.exports = {
         // React
         'react/sort-comp': 'off',
         'react/jsx-boolean-value': ['error', 'always'],
-        'react/jsx-curly-spacing': [
-            'error',
-            {
-                when: 'always',
-                children: true,
-            },
-        ],
         'react/jsx-props-no-spreading': 'off',
+        'react/jsx-one-expression-per-line': 'off',
         'react/jsx-indent': ['error', 4],
         'react/jsx-indent-props': ['error', 4],
         'react/state-in-constructor': ['error', 'never'],
         'react/prefer-stateless-function': 'off',
+        'react/destructuring-assignment': 'off',
         // Imports, file extensions
         'import/prefer-default-export': 'off',
         'import/extensions': [

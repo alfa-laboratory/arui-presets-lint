@@ -1,6 +1,6 @@
 {
   "name": "arui-presets-lint",
-  "version": "2.0.0",
+  "version": "2.0.0-next.2",
   "description": "Config files for arui-apps",
   "author": "Good guys from Alfa Laboratory",
   "license": "MIT",
@@ -11,7 +11,10 @@
     "babel-eslint": "^10.0.1",
     "case-sensitive-paths-webpack-plugin": "2.1.1",
     "command-line-args": "5.0.2",
-    "stylelint": "9.2.0"
+    "prettier-eslint-cli": "^5.0.0",
+    "stylelint": "12.0.0",
+    "stylelint-config-prettier": "^6.0.0",
+    "stylelint-prettier": "^1.1.1"
   },
   "peerDependencies": {
     "@typescript-eslint/eslint-plugin": ">= 2.5.0",
@@ -39,7 +42,6 @@
     "eslint-plugin-react-hooks": "2.2.0",
     "husky": "3.1.0",
     "lint-staged": "9.4.2",
-    "prettier-eslint-cli": "^5.0.0",
     "stylelint-config-prettier": "^6.0.0",
     "stylelint-prettier": "^1.1.1"
   },

@@ -19,12 +19,111 @@ Alfa Laboratory UI Presets
 Установка
 ---------
 В качестве пакетного менеджера, проект использует yarn:
+
 ```
-yarn add arui-presets-lint --dev
+yarn add --dev arui-presets-lint \
+  @typescript-eslint/eslint-plugin \
+  @typescript-eslint/parser \
+  eslint \
+  eslint-config-airbnb \
+  eslint-import-resolver-typescript \
+  eslint-plugin-import \
+  eslint-plugin-jsx-a11y \
+  eslint-plugin-react \
+  eslint-plugin-react-hooks
 ```
 
-Использование линтеров
-----------------------
+## Конфигурация всех линтеров через `package.json`:
+
+```json
+{
+  "prettier": "arui-presets-lint/prettier",
+  "eslintConfig": {
+    "extends": "./node_modules/arui-presets-lint/eslint/index.js"
+  },
+  "stylelint": {
+    "extends": "arui-presets-lint/stylelint"
+  }
+}
+```
+
+## Конфигурация скриптов для запуска линтеров и форматтера в `package.json`:
+
+```json
+{
+  "script": {
+    "lint-css": "stylelint ./src/**/*.css",
+    "lint-scripts": "eslint ./src/ ./config/ --ext .js,.jsx,.ts,.tsx",
+    "lint": "npm run lint-css && npm run lint-scripts",
+    "format": "prettier-eslint --write \"./{config,src}/**/*.{ts,tsx,js,jsx,css}\""
+  }
+}
+```
+
+## Конфигурация `husky` и `lint-staged`:
+```json
+{
+  "lint-staged": {
+    "concurrent": true,
+    "linters": {
+      "src/**/*.{js,jsx,ts,tsx}": [
+        "prettier-eslint --write",
+        "git add",
+        "eslint"
+      ],
+      "*.css": [
+        "prettier-eslint --write",
+        "git add",
+        "stylelint"
+      ]
+    }
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint-staged"
+    }
+  }
+}
+```
+
+## Итоговая конфигурация линтеров:
+```json
+{
+  "script": {
+    "lint-css": "stylelint ./src/**/*.css",
+    "lint-scripts": "eslint ./src/ ./config/ --ext .js,.jsx,.ts,.tsx",
+    "lint": "npm run lint-css && npm run lint-scripts",
+    "format": "prettier-eslint --write \"./{config,src}/**/*.{ts,tsx,js,jsx,css}\""
+  },
+  "lint-staged": {
+    "concurrent": true,
+    "linters": {
+      "src/**/*.{js,jsx,ts,tsx}": [
+        "prettier-eslint --write",
+        "git add",
+        "eslint"
+      ],
+      "*.css": [
+        "prettier-eslint --write",
+        "git add",
+        "stylelint"
+      ]
+    }
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint-staged"
+    }
+  },
+  "prettier": "arui-presets-lint/prettier",
+  "eslintConfig": {
+    "extends": "./node_modules/arui-presets-lint/eslint/index.js"
+  },
+  "stylelint": {
+    "extends": "arui-presets-lint/stylelint"
+  }
+}
+```
 
 #### commitlint
 Вы можете унаследовать конфигурацию вашего commitlint от `arui-presets-lint/commitlint`.
@@ -35,86 +134,6 @@ yarn add arui-presets-lint --dev
 module.exports = {
     extends: ['./node_modules/arui-presets-lint/commitlint']
 };
-```
-
-
-#### eslint
-Вы можете унаследовать конфигурацию вашего eslint от `arui-presets-lint/eslint`.
-К сожалению, разработчики eslint [очень не хотят](https://github.com/eslint/eslint/issues/3458) делать полноценную систему для общих конфигураций, так что вам 
-необходимо так же установить `peerDependencies`.
-
-```
-yarn add eslint eslint-config-airbnb eslint-import-resolver-typescript eslint-plugin-import eslint-plugin-jsx-a11y\
- eslint-plugin-react eslint-plugin-react-hooks @typescript-eslint/eslint-plugin --dev
-```
-
-
-Файл `.eslintrc.js` вашего проекта:
-```js
-module.exports = {
-    extends: require.resolve('arui-presets-lint/eslint')
-};
-```
-
-#### stylelint
-Вы можете унаследовать конфигурацию вашего stylelint от `arui-presets-lint/stylelint`.
-
-
-Файл `stylelint.config.js` вашего проекта:
-```js
-module.exports = {
-    extends: 'arui-presets-lint/stylelint'
-};
-```
-
-В зависимостях этого проекта уже имеются stylelint и eslint с нужными наборами плагинов, поэтому
-для использования валидации достаточно добавить в "scripts" вашего package.json
-```
-"lint-css": "stylelint ./src/**/*.css",
-"lint-js": "eslint ./src/ --ext .js,.jsx",
-"lint": "npm run lint-css && npm run lint-js",
-```
-
-#### prettier
-Файл `package.json` вашего проекта:
-```
-...
-    "prettier": "arui-presets-lint/prettier",
-...
-```
-
-Для корректной работы с правилами линтера рекомендуется использовать `prettier-eslint`
-```
-yarn add prettier-eslint --dev
-```
-
-Файл `package.json`:
-```
-...
-    "scripts": {
-        "format": "prettier-eslint --write \"./src/**/*.{ts,tsx,js,jsx,css}\""
-    },
-...
-```
-
-Автоматическое форматирование на прекомит хуке возможно с помощью пакетов `lint-staged` и `husky`.
-Конфигурация в `package.json`:
-
-```
-...
-    "lint-staged": {
-        "concurrent": true,
-        "linters": {
-            "src/**/*.{js,jsx,ts,tsx}": ["prettier-eslint --write", "git add", "eslint"],
-            "*.css": ["prettier-eslint --write", "git add", "stylelint"]
-        }
-    },
-    "husky": {
-        "hooks": {
-            "pre-commit": "yarn lint-staged",
-        }
-    },
-...
 ```
 
 Лицензия
