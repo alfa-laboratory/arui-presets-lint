@@ -1,3 +1,13 @@
+<a name="2.0.1"></a>
+## [2.0.1](https://github.com/alfa-laboratory/arui-presets-lint/compare/v2.0.0...v2.0.1) (2019-12-24)
+
+
+### Bug Fixes
+
+* **stylelint:** fix path to plugin, up plugin version ([e1ebf5e](https://github.com/alfa-laboratory/arui-presets-lint/commit/e1ebf5e))
+
+
+
 <a name="2.0.0"></a>
 # [2.0.0](https://github.com/alfa-laboratory/arui-presets-lint/compare/v1.2.1...v2.0.0) (2019-12-06)
 
