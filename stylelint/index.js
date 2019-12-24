@@ -129,6 +129,6 @@ module.exports = {
         'value-list-comma-space-before': 'never'
     },
     plugins: [
-        './node_modules/arui-cssvars/lint/stylelint.js'
+        require.resolve('arui-cssvars/lint/stylelint.js')
     ]
 };
