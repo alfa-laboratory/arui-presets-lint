@@ -21,5 +21,6 @@ jobs:
       run: |
         yarn --frozen-lockfile
         yarn test
+        yarn audit
       env:
         CI: true
