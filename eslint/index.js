@@ -122,6 +122,8 @@ module.exports = {
 
         // Import
         'import/prefer-default-export': 'off',
+        'import/no-relative-parent-imports': 'error',
+        'import/no-default-export': 'error',
 
         // Sort class members
         'sort-class-members/sort-class-members': ['error', {
