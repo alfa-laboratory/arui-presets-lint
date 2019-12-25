@@ -753,10 +753,10 @@ arrify@^2.0.1:
   resolved "https://registry.yarnpkg.com/arrify/-/arrify-2.0.1.tgz#c9655e9331e0abcd588d2a7cad7e9956f66701fa"
   integrity sha512-3duEwti880xqi4eAMN8AyR4a0ByT90zoYdLlevfrvU43vb0YZwZVfxOgxWrLXXXpyugL0hNZc9G6BiB5B3nUug==
 
-arui-cssvars@1.1.2:
-  version "1.1.2"
-  resolved "https://registry.yarnpkg.com/arui-cssvars/-/arui-cssvars-1.1.2.tgz#74a10904289a0e3a25cce05f29632687128a0cad"
-  integrity sha512-nBGRw4GwBmyYdvECo5L7IuwxS2Y236/RvaSR92hcO3Xq77kBC217UZ3I/O9y0fzH8w7uCdJTujIaHVWmXe3vig==
+arui-cssvars@1.1.5:
+  version "1.1.5"
+  resolved "https://registry.yarnpkg.com/arui-cssvars/-/arui-cssvars-1.1.5.tgz#45fa12be75a09e8e875a763c94b40a4a518183e7"
+  integrity sha512-IyNkZX5B8kA5urVGUJJmDlbGynB3auoTOXQwBLO1WdjXmFVsRbLQ5bvcAIt3+nOR3aTOVZV8BFDK3JTax1HXHA==
 
 assign-symbols@^1.0.0:
   version "1.0.0"
