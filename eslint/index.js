@@ -114,6 +114,7 @@ module.exports = {
         'react/prefer-stateless-function': 'off',
         'react/require-default-props': 'off',
         'react/sort-comp': 'off',
+        'react/jsx-one-expression-per-line': 'off',
 
         // A11Y
         'jsx-a11y/href-no-hash': 'off',
