@@ -1,3 +1,13 @@
+<a name="3.0.1"></a>
+## [3.0.1](https://github.com/alfa-laboratory/arui-presets-lint/compare/v3.0.0...v3.0.1) (2020-02-12)
+
+
+### Features
+
+* remove jsx-one-expression-per-line ([edca46e](https://github.com/alfa-laboratory/arui-presets-lint/commit/edca46e))
+
+
+
 <a name="3.0.0"></a>
 # [3.0.0](https://github.com/alfa-laboratory/arui-presets-lint/compare/v2.0.1...v3.0.0) (2020-02-12)
 
