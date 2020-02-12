@@ -23,7 +23,8 @@ module.exports = {
     },
     plugins: [
         'chai-friendly',
-        'sort-class-members'
+        'sort-class-members',
+        'react-hooks'
     ],
     rules: {
         // Style Guide
@@ -114,6 +115,10 @@ module.exports = {
         'react/prefer-stateless-function': 'off',
         'react/require-default-props': 'off',
         'react/sort-comp': 'off',
+
+        // React hooks
+        'react-hooks/rules-of-hooks': 'error',
+        'react-hooks/exhaustive-deps': 'warn',
 
         // A11Y
         'jsx-a11y/href-no-hash': 'off',
