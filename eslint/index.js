@@ -115,6 +115,7 @@ module.exports = {
         'react/prefer-stateless-function': 'off',
         'react/require-default-props': 'off',
         'react/sort-comp': 'off',
+        'react/jsx-one-expression-per-line': 'off',
 
         // React hooks
         'react-hooks/rules-of-hooks': 'error',
