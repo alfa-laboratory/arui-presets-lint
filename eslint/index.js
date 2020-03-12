@@ -43,23 +43,16 @@ module.exports = {
         'react/state-in-constructor': ['error', 'never'],
         'react/prefer-stateless-function': 'off',
         'react/destructuring-assignment': 'off',
-        // Imports, file extensions
-        'import/prefer-default-export': 'off',
-        'import/extensions': [
-            'error',
-            'always',
-            {
-                js: 'never',
-                jsx: 'never',
-                ts: 'never',
-                tsx: 'never',
-            },
-        ],
         'react/jsx-filename-extension': [1, { extensions: ['.jsx', '.tsx'] }],
 
-        // hooks rules
+        // React hooks
         'react-hooks/rules-of-hooks': 'error',
         'react-hooks/exhaustive-deps': 'warn',
+
+        // A11Y
+        'jsx-a11y/href-no-hash': 'off',
+        'jsx-a11y/anchor-is-valid': ['warn', { aspects: ['invalidHref'] }],
+        'jsx-a11y/label-has-for': ['error', { components: ['label'], allowChildren: true }],
 
         // typescript
         '@typescript-eslint/explicit-function-return-type': 'off',
@@ -77,6 +70,19 @@ module.exports = {
         '@typescript-eslint/no-use-before-define': [
             'error',
             { functions: false, classes: true, variables: true },
+        ],
+
+        // Imports, file extensions
+        'import/prefer-default-export': 'off',
+        'import/extensions': [
+            'error',
+            'always',
+            {
+                js: 'never',
+                jsx: 'never',
+                ts: 'never',
+                tsx: 'never',
+            },
         ],
 
         // rules should be transformed to errors

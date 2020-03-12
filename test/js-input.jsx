@@ -16,6 +16,7 @@ class AnswersGiver {
 }
 
 const giver = new AnswersGiver();
+
 definedAfterUsage();
 
 console.log(giver.getAnswer());

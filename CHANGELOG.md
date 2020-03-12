@@ -1,3 +1,28 @@
+<a name="3.0.1"></a>
+## [3.0.1](https://github.com/alfa-laboratory/arui-presets-lint/compare/v3.0.0...v3.0.1) (2020-02-12)
+
+
+### Features
+
+* remove jsx-one-expression-per-line ([edca46e](https://github.com/alfa-laboratory/arui-presets-lint/commit/edca46e))
+
+
+
+<a name="3.0.0"></a>
+# [3.0.0](https://github.com/alfa-laboratory/arui-presets-lint/compare/v2.0.1...v3.0.0) (2020-02-12)
+
+
+### Bug Fixes
+
+* **js-input:** fix eslint errors ([5b34d19](https://github.com/alfa-laboratory/arui-presets-lint/commit/5b34d19))
+
+
+### Features
+
+* **dependencies:** add eslint-plugin-react-hooks and extend rules. update plugin eslint ([4d73805](https://github.com/alfa-laboratory/arui-presets-lint/commit/4d73805))
+
+
+
 <a name="2.0.1"></a>
 ## [2.0.1](https://github.com/alfa-laboratory/arui-presets-lint/compare/v2.0.0...v2.0.1) (2019-12-24)
 
