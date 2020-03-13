@@ -1,5 +1,5 @@
 module.exports = {
-    parser: 'babel-eslint',
+    parser: '@typescript-eslint/parser',
     extends: ['airbnb', 'plugin:@typescript-eslint/recommended', 'prettier'],
     parserOptions: {
         ecmaVersion: 2018,
@@ -24,6 +24,7 @@ module.exports = {
         // Override default airbnb rules
         'no-plusplus': ['error', { allowForLoopAfterthoughts: true }],
         'no-negated-condition': 'warn',
+        'default-case': 'off',
         'no-use-before-define': [
             'error',
             {
@@ -41,7 +42,9 @@ module.exports = {
         'max-nested-callbacks': 'warn',
 
         // React
+        'react/static-property-placement': ['error', 'static public field'],
         'react/sort-comp': 'off',
+        'react/require-default-props': 'off',
         'react/jsx-boolean-value': ['error', 'always'],
         'react/jsx-props-no-spreading': 'off',
         'react/jsx-one-expression-per-line': 'off',
@@ -94,17 +97,6 @@ module.exports = {
                 node: true,
                 jest: true,
                 browser: true,
-            },
-        },
-        {
-            files: ['*.{ts,tsx}'],
-            parser: '@typescript-eslint/parser',
-            parserOptions: {
-                ecmaVersion: 2018,
-                sourceType: 'module',
-                ecmaFeatures: {
-                    jsx: true,
-                },
             },
         },
     ],
