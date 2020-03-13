@@ -21,9 +21,9 @@ module.exports = {
         },
     },
     rules: {
+        // Override default airbnb rules
         'no-plusplus': ['error', { allowForLoopAfterthoughts: true }],
         'no-negated-condition': 'warn',
-        // Variables
         'no-use-before-define': [
             'error',
             {
@@ -33,6 +33,13 @@ module.exports = {
             },
         ],
 
+        // rules should be transformed to errors
+        'no-shadow': 'warn',
+
+        // code smell detection
+        complexity: ['warn', 20],
+        'max-nested-callbacks': 'warn',
+
         // React
         'react/sort-comp': 'off',
         'react/jsx-boolean-value': ['error', 'always'],
@@ -40,6 +47,9 @@ module.exports = {
         'react/jsx-one-expression-per-line': 'off',
         'react/jsx-indent': ['error', 4],
         'react/jsx-indent-props': ['error', 4],
+        'react/jsx-curly-spacing': 'off',
+        'react/jsx-curly-newline': 'off',
+        'react/jsx-wrap-multilines': 'off',
         'react/state-in-constructor': ['error', 'never'],
         'react/prefer-stateless-function': 'off',
         'react/destructuring-assignment': 'off',
@@ -74,27 +84,12 @@ module.exports = {
 
         // Imports, file extensions
         'import/prefer-default-export': 'off',
-        'import/extensions': [
-            'error',
-            'always',
-            {
-                js: 'never',
-                jsx: 'never',
-                ts: 'never',
-                tsx: 'never',
-            },
-        ],
-
-        // rules should be transformed to errors
-        'no-shadow': 'warn',
-
-        // code smell detection
-        complexity: ['warn', 20],
-        'max-nested-callbacks': 'warn',
+        'import/no-unresolved': 'off',
+        'import/extensions': 'off',
     },
     overrides: [
         {
-            files: ['*.test.{js,jsx,ts,tsx}'],
+            files: ['*.{test,tests,spec}.{js,jsx,ts,tsx}'],
             env: {
                 node: true,
                 jest: true,

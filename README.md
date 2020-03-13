@@ -18,7 +18,21 @@ Alfa Laboratory UI Presets
 
 Установка
 ---------
-В качестве пакетного менеджера, проект использует yarn:
+Для установки всех зависимостей проекта рекомендуется использовать [install-peerdeps](https://github.com/nathanhleung/install-peerdeps)
+
+```
+npx install-peerdeps --dev arui-presets-lint
+```
+
+Если вы используете yarn на данный момент у вас могут возникнуть проблемы при использовании `install-peerdeps`.
+См. этот [issue](https://github.com/nathanhleung/install-peerdeps/issues/70). Временным решением может служить использование
+версии `1.11.0`.
+
+```
+npx install-peerdeps@1.11.0 --dev arui-presets-lint
+```
+
+Так же вы можете поставить все необходимые peerDependencies вручную:
 
 ```
 yarn add --dev arui-presets-lint \
@@ -43,6 +57,11 @@ yarn add --dev arui-presets-lint \
   },
   "stylelint": {
     "extends": "arui-presets-lint/stylelint"
+  },
+  "commitlint": {
+    "extends": [
+      "./node_modules/arui-presets-lint/commitlint"
+    ]
   }
 }
 ```
@@ -55,7 +74,7 @@ yarn add --dev arui-presets-lint \
     "lint-css": "stylelint ./src/**/*.css",
     "lint-scripts": "eslint ./src/ ./config/ --ext .js,.jsx,.ts,.tsx",
     "lint": "npm run lint-css && npm run lint-scripts",
-    "format": "prettier-eslint --write \"./{config,src}/**/*.{ts,tsx,js,jsx,css}\""
+    "format": "prettier --write \"./{config,src}/**/*.{ts,tsx,js,jsx,css}\""
   }
 }
 ```
@@ -67,12 +86,12 @@ yarn add --dev arui-presets-lint \
     "concurrent": true,
     "linters": {
       "src/**/*.{js,jsx,ts,tsx}": [
-        "prettier-eslint --write",
+        "prettier --write",
         "git add",
         "eslint"
       ],
       "*.css": [
-        "prettier-eslint --write",
+        "prettier --write",
         "git add",
         "stylelint"
       ]
@@ -93,18 +112,18 @@ yarn add --dev arui-presets-lint \
     "lint-css": "stylelint ./src/**/*.css",
     "lint-scripts": "eslint ./src/ ./config/ --ext .js,.jsx,.ts,.tsx",
     "lint": "npm run lint-css && npm run lint-scripts",
-    "format": "prettier-eslint --write \"./{config,src}/**/*.{ts,tsx,js,jsx,css}\""
+    "format": "prettier --write \"./{config,src}/**/*.{ts,tsx,js,jsx,css}\""
   },
   "lint-staged": {
     "concurrent": true,
     "linters": {
       "src/**/*.{js,jsx,ts,tsx}": [
-        "prettier-eslint --write",
+        "prettier --write",
         "git add",
         "eslint"
       ],
       "*.css": [
-        "prettier-eslint --write",
+        "prettier --write",
         "git add",
         "stylelint"
       ]
@@ -121,19 +140,13 @@ yarn add --dev arui-presets-lint \
   },
   "stylelint": {
     "extends": "arui-presets-lint/stylelint"
+  },
+  "commitlint": {
+    "extends": [
+      "./node_modules/arui-presets-lint/commitlint"
+    ]
   }
 }
-```
-
-#### commitlint
-Вы можете унаследовать конфигурацию вашего commitlint от `arui-presets-lint/commitlint`.
-
-
-Файл `commitlint.config.js` вашего проекта:
-```js
-module.exports = {
-    extends: ['./node_modules/arui-presets-lint/commitlint']
-};
 ```
 
 Лицензия
