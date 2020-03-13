@@ -40,11 +40,14 @@ yarn add --dev arui-presets-lint \
   @typescript-eslint/parser \
   eslint \
   eslint-config-airbnb \
+  eslint-config-prettier \
   eslint-import-resolver-typescript \
   eslint-plugin-import \
   eslint-plugin-jsx-a11y \
   eslint-plugin-react \
-  eslint-plugin-react-hooks
+  eslint-plugin-react-hooks \
+  stylelint \
+  prettier
 ```
 
 ## Конфигурация всех линтеров через `package.json`:

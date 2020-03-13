@@ -42,6 +42,7 @@ module.exports = {
         'max-nested-callbacks': 'warn',
 
         // React
+        'react/jsx-fragments': ['warn', 'element'],
         'react/static-property-placement': ['error', 'static public field'],
         'react/sort-comp': 'off',
         'react/require-default-props': 'off',
