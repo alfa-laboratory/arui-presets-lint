@@ -1,6 +1,13 @@
 module.exports = {
     parser: '@typescript-eslint/parser',
-    extends: ['airbnb', 'plugin:@typescript-eslint/recommended', 'prettier'],
+    extends: [
+        'airbnb',
+        'airbnb/hooks',
+        'plugin:@typescript-eslint/recommended',
+        'prettier',
+        'prettier/@typescript-eslint',
+        'prettier/react',
+    ],
     parserOptions: {
         ecmaVersion: 2018,
         sourceType: 'module',
@@ -21,6 +28,35 @@ module.exports = {
         },
     },
     rules: {
+        // Правила форматирования. Так как мы используем prettier - эти правила нужны скорее для
+        // подсказок разработчику. Так же, потенциально, эти правила могут войти в конфликт с prettier.
+        // По дефолту все эти правила выключаются пресетами от prettier.
+        // Так что выставляем их в warn. Часть правил не включаем, так как они имеют слишком много
+        // вариаций и при любой конфигурации будут конфликтовать с prettier.
+        indent: ['warn', 4],
+        'react/jsx-indent': ['warn', 4],
+        'react/jsx-indent-props': ['warn', 4],
+        'react/jsx-curly-spacing': ['warn', 'never'],
+        'max-len': ['warn', { code: 100, ignoreComments: true }],
+        quotes: ['warn', 'single'],
+        'comma-dangle': ['warn', 'always-multiline'],
+        'comma-spacing': ['warn', { before: false, after: true }],
+        'comma-style': ['warn', 'last'],
+        'computed-property-spacing': ['warn', 'never'],
+        'func-call-spacing': ['warn', 'never'],
+        'key-spacing': ['warn'],
+        'no-trailing-spaces': ['warn'],
+        'no-whitespace-before-property': ['warn'],
+        'quote-props': ['warn', 'as-needed'],
+        semi: ['warn'],
+        'semi-spacing': ['warn'],
+        'semi-style': ['warn'],
+        'space-before-blocks': ['warn'],
+        'space-in-parens': ['warn'],
+        'space-infix-ops': ['warn'],
+        'space-unary-ops': ['warn'],
+        'switch-colon-spacing': ['warn'],
+
         // Override default airbnb rules
         'no-plusplus': ['error', { allowForLoopAfterthoughts: true }],
         'no-negated-condition': 'warn',
@@ -44,27 +80,17 @@ module.exports = {
         // React
         'react/jsx-fragments': ['warn', 'element'],
         'react/static-property-placement': ['error', 'static public field'],
+        'react/state-in-constructor': ['error', 'never'],
+        'react/prop-types': 'off',
         'react/sort-comp': 'off',
         'react/require-default-props': 'off',
         'react/jsx-boolean-value': ['error', 'always'],
         'react/jsx-props-no-spreading': 'off',
-        'react/jsx-one-expression-per-line': 'off',
-        'react/jsx-indent': ['error', 4],
-        'react/jsx-indent-props': ['error', 4],
-        'react/jsx-curly-spacing': 'off',
-        'react/jsx-curly-newline': 'off',
-        'react/jsx-wrap-multilines': 'off',
-        'react/state-in-constructor': ['error', 'never'],
         'react/prefer-stateless-function': 'off',
         'react/destructuring-assignment': 'off',
         'react/jsx-filename-extension': [1, { extensions: ['.jsx', '.tsx'] }],
 
-        // React hooks
-        'react-hooks/rules-of-hooks': 'error',
-        'react-hooks/exhaustive-deps': 'warn',
-
         // A11Y
-        'jsx-a11y/href-no-hash': 'off',
         'jsx-a11y/anchor-is-valid': ['warn', { aspects: ['invalidHref'] }],
         'jsx-a11y/label-has-for': ['error', { components: ['label'], allowChildren: true }],
 
