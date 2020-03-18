@@ -7,34 +7,45 @@
   "dependencies": {
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-conventional": "^8.3.4",
-    "conventional-changelog-cli": "1.3.21",
-    "conventional-github-releaser": "2.0.2",
     "arui-cssvars": "1.1.5",
     "babel-eslint": "^10.0.3",
     "case-sensitive-paths-webpack-plugin": "2.3.0",
     "command-line-args": "5.1.1",
-    "stylelint": "9.2.0"
+    "conventional-changelog-cli": "1.3.21",
+    "conventional-github-releaser": "2.0.2",
+    "stylelint-config-prettier": "^6.0.0",
+    "stylelint-prettier": "^1.1.1"
   },
   "peerDependencies": {
-    "eslint": ">= 4.19.0",
-    "eslint-config-airbnb": ">= 16.1.0",
-    "eslint-plugin-chai-friendly": ">= 0.4.1",
-    "eslint-plugin-import": ">= 2.11.0",
-    "eslint-plugin-jsx-a11y": ">= 6.0.3",
-    "eslint-plugin-react": ">= 7.7.0",
-    "eslint-plugin-sort-class-members": ">= 1.3.0"
+    "@typescript-eslint/eslint-plugin": "^2.23.0",
+    "@typescript-eslint/parser": "^2.23.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-import-resolver-typescript": "^2.0.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.19.0",
+    "eslint-plugin-react-hooks": "^2.5.0",
+    "stylelint": "^12.0.0",
+    "prettier": "^1.19.1"
   },
   "devDependencies": {
-    "eslint": "6.6.0",
-    "eslint-config-airbnb": "^16.1.0",
-    "eslint-plugin-chai-friendly": "^0.4.1",
-    "eslint-plugin-import": "^2.20.0",
-    "eslint-plugin-jsx-a11y": "^6.2.3",
-    "eslint-plugin-react": "^7.18.0",
-    "eslint-plugin-react-hooks": "2.3.0",
-    "eslint-plugin-sort-class-members": "^1.6.0",
+    "@typescript-eslint/eslint-plugin": "2.23.0",
+    "@typescript-eslint/parser": "2.23.0",
+    "eslint": "6.8.0",
+    "eslint-config-airbnb": "18.0.1",
+    "eslint-config-prettier": "6.10.0",
+    "eslint-import-resolver-typescript": "2.0.0",
+    "eslint-plugin-import": "2.20.1",
+    "eslint-plugin-jsx-a11y": "6.2.3",
+    "eslint-plugin-react": "7.19.0",
+    "eslint-plugin-react-hooks": "2.5.0",
     "husky": "3.1.0",
-    "lint-staged": "7.0.4"
+    "lint-staged": "9.4.2",
+    "prettier": "1.19.1",
+    "stylelint": "12.0.0",
+    "typescript": "3.8.3"
   },
   "scripts": {
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
@@ -46,22 +57,33 @@
     "release-minor": "npm version minor -m 'chore(*): minor version'",
     "release-major": "npm version major -m 'chore(*): major version'",
     "test": "yarn test:eslint && yarn test:stylelint",
-    "test:eslint": "eslint ./test/js-input.jsx",
+    "test:eslint": "eslint ./test/js-input.jsx ./test/ts-input.tsx",
     "test:stylelint": "node ./test/stylelint-test.js",
-    "version": "git fetch --tags && npm run changelog && git add CHANGELOG.md"
+    "version": "git fetch --tags && npm run changelog && git add CHANGELOG.md",
+    "format": "prettier --write \"./{eslint,stylelint,test,commitlint}/**/*.{ts,tsx,js,jsx,css}\""
   },
   "lint-staged": {
-    "*.js": [
+    "**/*.{js,jsx,ts,tsx,css}": [
+      "prettier --write",
+      "git add",
       "eslint"
     ],
     "stylelint/*.js": [
-      "npm run test:stylelint"
+      "prettier --write",
+      "git add",
+      "yarn test:stylelint"
     ]
   },
   "resolutions": {
     "set-value": ">=2.0.1",
     "js-yaml": ">=3.13.1",
-    "braces": ">=2.3.1"
+    "braces": ">=2.3.1",
+    "lodash.merge": ">=4.6.2",
+    "lodash": ">=4.17.12",
+    "mixin-deep": ">=1.3.2",
+    "handlebars": ">=4.5.3",
+    "kind-of": ">= 6.0.3",
+    "minimist": ">= 1.2.3"
   },
   "repository": {
     "type": "git",
@@ -73,7 +95,9 @@
   "husky": {
     "hooks": {
       "pre-commit": "yarn test",
+      "pre-push": "yarn audit",
       "commit-msg": "commitlint -e"
     }
-  }
+  },
+  "prettier": "./prettier.js"
 }
