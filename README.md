@@ -32,23 +32,14 @@ npx install-peerdeps --dev arui-presets-lint
 npx install-peerdeps@1.11.0 --dev arui-presets-lint
 ```
 
-Так же вы можете поставить все необходимые peerDependencies вручную:
+Так же вы можете поставить все необходимые peerDependencies вручную. Для этого узнайте требуемые версии
+с помощью команды
 
 ```
-yarn add --dev arui-presets-lint \
-  @typescript-eslint/eslint-plugin \
-  @typescript-eslint/parser \
-  eslint \
-  eslint-config-airbnb \
-  eslint-config-prettier \
-  eslint-import-resolver-typescript \
-  eslint-plugin-import \
-  eslint-plugin-jsx-a11y \
-  eslint-plugin-react \
-  eslint-plugin-react-hooks \
-  stylelint \
-  prettier
+npm info "arui-presets-lint@latest" peerDependencies
 ```
+
+И добавьте их себе в проект как dev зависимости.
 
 ## Конфигурация всех линтеров через `package.json`:
 
