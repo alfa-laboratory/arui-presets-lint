@@ -33,11 +33,10 @@ module.exports = {
         // По дефолту все эти правила выключаются пресетами от prettier.
         // Так что выставляем их в warn. Часть правил не включаем, так как они имеют слишком много
         // вариаций и при любой конфигурации будут конфликтовать с prettier.
-        indent: ['warn', 4],
+        // indent ни в каких комбинациях я завести не смог на реальном проекте.
         'react/jsx-indent': ['warn', 4],
         'react/jsx-indent-props': ['warn', 4],
         'react/jsx-curly-spacing': ['warn', 'never'],
-        'max-len': ['warn', { code: 100, ignoreComments: true }],
         quotes: ['warn', 'single'],
         'comma-dangle': ['warn', 'always-multiline'],
         'comma-spacing': ['warn', { before: false, after: true }],
