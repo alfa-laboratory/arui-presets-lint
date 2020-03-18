@@ -1,3 +1,25 @@
+<a name="4.0.0"></a>
+# [4.0.0](https://github.com/alfa-laboratory/arui-presets-lint/compare/v3.0.1...v4.0.0) (2020-03-18)
+
+
+### Bug Fixes
+
+* **eslint:** disable indent and max-len rules ([97967ed](https://github.com/alfa-laboratory/arui-presets-lint/commit/97967ed))
+* **eslint:** use ts parser for all files ([609cda5](https://github.com/alfa-laboratory/arui-presets-lint/commit/609cda5))
+* **package:** fix yarn audit errors ([3f73abc](https://github.com/alfa-laboratory/arui-presets-lint/commit/3f73abc))
+* **package:** restore version string ([a59243c](https://github.com/alfa-laboratory/arui-presets-lint/commit/a59243c))
+
+
+### Features
+
+* add prettier ([077b698](https://github.com/alfa-laboratory/arui-presets-lint/commit/077b698))
+* add ts example ([dd2c8b0](https://github.com/alfa-laboratory/arui-presets-lint/commit/dd2c8b0))
+* new configuration, add prettier instructions ([3e0fa81](https://github.com/alfa-laboratory/arui-presets-lint/commit/3e0fa81))
+* use prettier instead of prettier-eslint ([b954d26](https://github.com/alfa-laboratory/arui-presets-lint/commit/b954d26))
+* **eslint:** add warn rules for formatting ([921947d](https://github.com/alfa-laboratory/arui-presets-lint/commit/921947d))
+
+
+
 <a name="3.0.1"></a>
 ## [3.0.1](https://github.com/alfa-laboratory/arui-presets-lint/compare/v3.0.0...v3.0.1) (2020-02-12)
 
