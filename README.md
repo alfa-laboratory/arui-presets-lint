@@ -77,19 +77,16 @@ npm info "arui-presets-lint@latest" peerDependencies
 ```json
 {
   "lint-staged": {
-    "concurrent": true,
-    "linters": {
-      "src/**/*.{js,jsx,ts,tsx}": [
-        "prettier --write",
-        "git add",
-        "eslint"
-      ],
-      "*.css": [
-        "prettier --write",
-        "git add",
-        "stylelint"
-      ]
-    }
+    "src/**/*.{js,jsx,ts,tsx}": [
+      "prettier --write",
+      "git add",
+      "eslint"
+    ],
+    "*.css": [
+      "prettier --write",
+      "git add",
+      "stylelint"
+    ]
   },
   "husky": {
     "hooks": {
@@ -109,19 +106,16 @@ npm info "arui-presets-lint@latest" peerDependencies
     "format": "prettier --write \"./{config,src}/**/*.{ts,tsx,js,jsx,css}\""
   },
   "lint-staged": {
-    "concurrent": true,
-    "linters": {
-      "src/**/*.{js,jsx,ts,tsx}": [
-        "prettier --write",
-        "git add",
-        "eslint"
-      ],
-      "*.css": [
-        "prettier --write",
-        "git add",
-        "stylelint"
-      ]
-    }
+    "src/**/*.{js,jsx,ts,tsx}": [
+      "prettier --write",
+      "git add",
+      "eslint"
+    ],
+    "*.css": [
+      "prettier --write",
+      "git add",
+      "stylelint"
+    ]
   },
   "husky": {
     "hooks": {
