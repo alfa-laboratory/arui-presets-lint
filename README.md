@@ -67,7 +67,7 @@ npm info "arui-presets-lint@latest" peerDependencies
   "script": {
     "lint-css": "stylelint ./src/**/*.css",
     "lint-scripts": "eslint ./src/ ./config/ --ext .js,.jsx,.ts,.tsx",
-    "lint": "npm run lint-css && npm run lint-scripts",
+    "lint": "yarn lint-css && yarn lint-scripts",
     "format": "prettier --write \"./{config,src}/**/*.{ts,tsx,js,jsx,css}\""
   }
 }
@@ -103,7 +103,7 @@ npm info "arui-presets-lint@latest" peerDependencies
   "script": {
     "lint-css": "stylelint ./src/**/*.css",
     "lint-scripts": "eslint ./src/ ./config/ --ext .js,.jsx,.ts,.tsx",
-    "lint": "npm run lint-css && npm run lint-scripts",
+    "lint": "yarn run lint-css && yarn run lint-scripts",
     "format": "prettier --write \"./{config,src}/**/*.{ts,tsx,js,jsx,css}\""
   },
   "lint-staged": {
