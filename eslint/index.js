@@ -37,7 +37,7 @@ module.exports = {
         'react/jsx-indent': ['warn', 4],
         'react/jsx-indent-props': ['warn', 4],
         'react/jsx-curly-spacing': ['warn', 'never'],
-        quotes: ['warn', 'single'],
+        quotes: ['warn', 'single', { avoidEscape: true }],
         'comma-dangle': ['warn', 'always-multiline'],
         'comma-spacing': ['warn', { before: false, after: true }],
         'comma-style': ['warn', 'last'],
