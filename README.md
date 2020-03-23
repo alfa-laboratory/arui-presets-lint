@@ -45,18 +45,18 @@ npm info "arui-presets-lint@latest" peerDependencies
 
 ```json
 {
-  "prettier": "arui-presets-lint/prettier",
-  "eslintConfig": {
-    "extends": "./node_modules/arui-presets-lint/eslint/index.js"
-  },
-  "stylelint": {
-    "extends": "arui-presets-lint/stylelint"
-  },
-  "commitlint": {
-    "extends": [
-      "./node_modules/arui-presets-lint/commitlint"
-    ]
-  }
+    "prettier": "arui-presets-lint/prettier",
+    "eslintConfig": {
+        "extends": "./node_modules/arui-presets-lint/eslint/index.js"
+    },
+    "stylelint": {
+        "extends": "arui-presets-lint/stylelint"
+    },
+    "commitlint": {
+        "extends": [
+            "./node_modules/arui-presets-lint/commitlint"
+        ]
+    }
 }
 ```
 
@@ -64,76 +64,72 @@ npm info "arui-presets-lint@latest" peerDependencies
 
 ```json
 {
-  "script": {
-    "lint-css": "stylelint ./src/**/*.css",
-    "lint-scripts": "eslint ./src/ ./config/ --ext .js,.jsx,.ts,.tsx",
-    "lint": "npm run lint-css && npm run lint-scripts",
-    "format": "prettier --write \"./{config,src}/**/*.{ts,tsx,js,jsx,css}\""
-  }
+    "script": {
+        "lint:css": "stylelint ./src/**/*.css",
+        "lint:scripts": "eslint ./src/ ./config/ --ext .js,.jsx,.ts,.tsx",
+        "lint": "yarn lint:css && yarn lint:scripts",
+        "format": "prettier --write \"./{config,src}/**/*.{ts,tsx,js,jsx,css}\""
+    }
 }
 ```
 
 ## Конфигурация `husky` и `lint-staged`:
 ```json
 {
-  "lint-staged": {
-    "src/**/*.{js,jsx,ts,tsx}": [
-      "prettier --write",
-      "git add",
-      "eslint"
-    ],
-    "*.css": [
-      "prettier --write",
-      "git add",
-      "stylelint"
-    ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "yarn lint-staged"
+    "lint-staged": {
+        "src/**/*.{js,jsx,ts,tsx}": [
+            "prettier --write",
+            "eslint"
+        ],
+        "*.css": [
+            "prettier --write",
+            "stylelint"
+        ]
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "yarn lint-staged"
+        }
     }
-  }
 }
 ```
 
 ## Итоговая конфигурация линтеров:
 ```json
 {
-  "script": {
-    "lint-css": "stylelint ./src/**/*.css",
-    "lint-scripts": "eslint ./src/ ./config/ --ext .js,.jsx,.ts,.tsx",
-    "lint": "npm run lint-css && npm run lint-scripts",
-    "format": "prettier --write \"./{config,src}/**/*.{ts,tsx,js,jsx,css}\""
-  },
-  "lint-staged": {
-    "src/**/*.{js,jsx,ts,tsx}": [
-      "prettier --write",
-      "git add",
-      "eslint"
-    ],
-    "*.css": [
-      "prettier --write",
-      "git add",
-      "stylelint"
-    ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "yarn lint-staged"
+    "script": {
+        "lint:css": "stylelint ./src/**/*.css",
+        "lint:scripts": "eslint ./src/ ./config/ --ext .js,.jsx,.ts,.tsx",
+        "lint": "yarn lint:css && yarn lint:scripts",
+        "format": "prettier --write \"./{config,src}/**/*.{ts,tsx,js,jsx,css}\""
+    },
+    "lint-staged": {
+        "src/**/*.{js,jsx,ts,tsx}": [
+            "prettier --write",
+            "eslint"
+        ],
+        "*.css": [
+            "prettier --write",
+            "stylelint"
+        ]
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "yarn lint-staged"
+        }
+    },
+    "prettier": "arui-presets-lint/prettier",
+    "eslintConfig": {
+        "extends": "./node_modules/arui-presets-lint/eslint/index.js"
+    },
+    "stylelint": {
+        "extends": "arui-presets-lint/stylelint"
+    },
+    "commitlint": {
+        "extends": [
+            "./node_modules/arui-presets-lint/commitlint"
+        ]
     }
-  },
-  "prettier": "arui-presets-lint/prettier",
-  "eslintConfig": {
-    "extends": "./node_modules/arui-presets-lint/eslint/index.js"
-  },
-  "stylelint": {
-    "extends": "arui-presets-lint/stylelint"
-  },
-  "commitlint": {
-    "extends": [
-      "./node_modules/arui-presets-lint/commitlint"
-    ]
-  }
 }
 ```
 
@@ -143,7 +139,7 @@ npm info "arui-presets-lint@latest" peerDependencies
 ```
 The MIT License (MIT)
 
-Copyright (c) 2017 Alfa Laboratory
+Copyright (c) 2020 Alfa-Bank
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
