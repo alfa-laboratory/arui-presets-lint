@@ -89,7 +89,8 @@ npm info "arui-presets-lint@latest" peerDependencies
     "husky": {
         "hooks": {
             "pre-commit": "yarn lint-staged",
-        "commit-msg": "commitlint -e"}
+            "commit-msg": "commitlint -e"
+        }
     }
 }
 ```
