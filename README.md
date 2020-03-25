@@ -66,11 +66,20 @@ npm info "arui-presets-lint@latest" peerDependencies
 {
     "script": {
         "lint:css": "stylelint ./src/**/*.css",
-        "lint:scripts": "eslint ./src/ ./config/ --ext .js,.jsx,.ts,.tsx",
+        "lint:scripts": "eslint \"**/*.{js,jsx,ts,tsx}\" --ext .js,.jsx,.ts,.tsx",
         "lint": "yarn lint:css && yarn lint:scripts",
-        "format": "prettier --write \"./{config,src}/**/*.{ts,tsx,js,jsx,css}\""
+        "format": "prettier --ignore-path \"./.gitignore\" --write \"./**/*.{ts,tsx,js,jsx,css}\""
     }
 }
+```
+
+Если eslint пытается валидировать файлы, над которыми вы не имеете контроль, вы можете исключить
+их с помощью `.eslintignore`
+
+```
+.build
+.idea
+coverage
 ```
 
 ## Конфигурация `husky` и `lint-staged`:
@@ -100,9 +109,9 @@ npm info "arui-presets-lint@latest" peerDependencies
 {
     "script": {
         "lint:css": "stylelint ./src/**/*.css",
-        "lint:scripts": "eslint ./src/ ./config/ --ext .js,.jsx,.ts,.tsx",
+        "lint:scripts": "eslint \"**/*.{js,jsx,ts,tsx}\" --ext .js,.jsx,.ts,.tsx",
         "lint": "yarn lint:css && yarn lint:scripts",
-        "format": "prettier --write \"./{config,src}/**/*.{ts,tsx,js,jsx,css}\""
+        "format": "prettier --ignore-path \"./.gitignore\" --write \"./**/*.{ts,tsx,js,jsx,css}\""
     },
     "lint-staged": {
         "src/**/*.{js,jsx,ts,tsx}": [
