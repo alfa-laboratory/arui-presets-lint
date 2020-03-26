@@ -19,7 +19,7 @@ module.exports = {
         browser: true,
         node: true,
     },
-    plugins: ['react-hooks', '@typescript-eslint', 'import', 'react'],
+    plugins: ['react-hooks', '@typescript-eslint', 'import', 'react', 'cypress'],
     settings: {
         'import/resolver': {
             node: {
@@ -123,6 +123,16 @@ module.exports = {
                 node: true,
                 jest: true,
                 browser: true,
+            },
+        },
+        {
+            files: ['**/cypress/**/*'],
+            env: {
+                'cypress/globals': true,
+            },
+            rules: {
+                'cypress/no-assigning-return-values': 'error',
+                'cypress/no-unnecessary-waiting': 'error',
             },
         },
     ],
