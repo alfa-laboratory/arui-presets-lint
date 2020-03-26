@@ -112,6 +112,10 @@ module.exports = {
         ],
 
         // Imports, file extensions
+        'import/no-extraneous-dependencies': [
+            'error',
+            { devDependencies: ['**/*.{stories,test,tests,spec}.{js,jsx,ts,tsx}'] },
+        ],
         'import/prefer-default-export': 'off',
         'import/no-unresolved': 'off',
         'import/extensions': 'off',
