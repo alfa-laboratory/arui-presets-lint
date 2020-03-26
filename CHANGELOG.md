@@ -1,3 +1,19 @@
+<a name="4.1.0"></a>
+# [4.1.0](https://github.com/alfa-laboratory/arui-presets-lint/compare/v4.0.0...v4.1.0) (2020-03-26)
+
+
+### Bug Fixes
+
+* **eslint:** allow to import devDependencies in storybook and test files ([ec264d4](https://github.com/alfa-laboratory/arui-presets-lint/commit/ec264d4))
+* **eslint:** resolve conflict with prettier ([1be5db5](https://github.com/alfa-laboratory/arui-presets-lint/commit/1be5db5))
+
+
+### Features
+
+* **eslint:** add cypress support ([f93f601](https://github.com/alfa-laboratory/arui-presets-lint/commit/f93f601))
+
+
+
 <a name="4.0.0"></a>
 # [4.0.0](https://github.com/alfa-laboratory/arui-presets-lint/compare/v3.0.1...v4.0.0) (2020-03-18)
 
