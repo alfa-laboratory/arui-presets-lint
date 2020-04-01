@@ -4485,7 +4485,7 @@ prettier-eslint-cli@5.0.0:
     rxjs "^6.5.2"
     yargs "^13.2.4"
 
-prettier-eslint@^9.0.0, prettier-eslint@^9.0.1:
+prettier-eslint@9.0.1, prettier-eslint@^9.0.0:
   version "9.0.1"
   resolved "https://registry.yarnpkg.com/prettier-eslint/-/prettier-eslint-9.0.1.tgz#fbf507cde7329141cd368c6aeb54a70715d02cf4"
   integrity sha512-KZT65QTosSAqBBqmrC+RpXbsMRe7Os2YSR9cAfFbDlyPAopzA/S5bioiZ3rpziNQNSJaOxmtXSx07EQ+o2Dlug==
