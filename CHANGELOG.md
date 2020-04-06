@@ -1,3 +1,15 @@
+<a name="4.1.1"></a>
+## [4.1.1](https://github.com/alfa-laboratory/arui-presets-lint/compare/v4.1.0...v4.1.1) (2020-04-06)
+
+
+### Bug Fixes
+
+* update yarn.lock ([eab5945](https://github.com/alfa-laboratory/arui-presets-lint/commit/eab5945))
+* **arui-cssvars:** fix library ([0599231](https://github.com/alfa-laboratory/arui-presets-lint/commit/0599231))
+* **arui-cssvars:** update lib version to skip warnings when linter rule is disabled ([c1e4565](https://github.com/alfa-laboratory/arui-presets-lint/commit/c1e4565))
+
+
+
 <a name="4.1.0"></a>
 # [4.1.0](https://github.com/alfa-laboratory/arui-presets-lint/compare/v4.0.0...v4.1.0) (2020-03-26)
 
