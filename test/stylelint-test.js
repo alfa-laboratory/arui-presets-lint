@@ -11,7 +11,7 @@ stylelint
         code: cssFile,
         config: stylelintConfig,
     })
-    .then(result => {
+    .then((result) => {
         if (result.errored) {
             console.log(result.output); // eslint-disable-line no-console
             process.exit(-1);

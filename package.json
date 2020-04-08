@@ -19,35 +19,39 @@
     "peerDependencies": {
         "@typescript-eslint/eslint-plugin": "^2.23.0",
         "@typescript-eslint/parser": "^2.23.0",
-        "eslint": "^6.8.0",
+        "eslint": "^6.6.0",
         "eslint-config-airbnb": "^18.0.1",
-        "eslint-config-prettier": "^6.10.0",
         "eslint-import-resolver-typescript": "^2.0.0",
         "eslint-plugin-cypress": "2.10.3",
         "eslint-plugin-import": "^2.20.1",
         "eslint-plugin-jsx-a11y": "^6.2.3",
+        "eslint-plugin-prettier": "^3.1.2",
         "eslint-plugin-react": "^7.19.0",
         "eslint-plugin-react-hooks": "^2.5.0",
         "eslint-plugin-dirnames": "^1.0.0",
         "prettier": "^1.19.1",
+        "prettier-eslint": "^9.0.1",
+        "prettier-eslint-cli": "^5.0.0",
         "stylelint": "^12.0.0"
     },
     "devDependencies": {
         "@typescript-eslint/eslint-plugin": "2.23.0",
         "@typescript-eslint/parser": "2.23.0",
-        "eslint": "6.8.0",
+        "eslint": "6.6.0",
         "eslint-config-airbnb": "18.0.1",
-        "eslint-config-prettier": "6.10.0",
         "eslint-import-resolver-typescript": "2.0.0",
         "eslint-plugin-cypress": "2.10.3",
         "eslint-plugin-import": "2.20.1",
         "eslint-plugin-jsx-a11y": "6.2.3",
+        "eslint-plugin-prettier": "3.1.2",
         "eslint-plugin-react": "7.19.0",
         "eslint-plugin-react-hooks": "2.5.0",
         "eslint-plugin-dirnames": "1.0.0",
         "husky": "3.1.0",
         "lint-staged": "9.4.2",
         "prettier": "1.19.1",
+        "prettier-eslint": "9.0.1",
+        "prettier-eslint-cli": "5.0.0",
         "stylelint": "12.0.0",
         "typescript": "3.8.3"
     },
@@ -64,15 +68,15 @@
         "test:eslint": "eslint \"./test/**/*.{ts,tsx,js,jsx}\"",
         "test:stylelint": "node ./test/stylelint-test.js",
         "version": "git fetch --tags && npm run changelog && git add CHANGELOG.md",
-        "format": "prettier --write \"./{eslint,stylelint,test,commitlint}/**/*.{ts,tsx,js,jsx,css}\""
+        "format": "prettier-eslint --write \"./{eslint,stylelint,test,commitlint}/**/*.{ts,tsx,js,jsx,css}\""
     },
     "lint-staged": {
         "**/*.{js,jsx,ts,tsx,css}": [
-            "prettier --write",
+            "prettier-eslint --write",
             "eslint"
         ],
         "stylelint/*.js": [
-            "prettier --write",
+            "prettier-eslint --write",
             "yarn test:stylelint"
         ]
     },

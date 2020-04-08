@@ -1,13 +1,6 @@
 module.exports = {
     parser: '@typescript-eslint/parser',
-    extends: [
-        'airbnb',
-        'airbnb/hooks',
-        'plugin:@typescript-eslint/recommended',
-        'prettier',
-        'prettier/@typescript-eslint',
-        'prettier/react',
-    ],
+    extends: ['airbnb', 'airbnb/hooks', 'plugin:@typescript-eslint/recommended'],
     parserOptions: {
         ecmaVersion: 2018,
         sourceType: 'module',
@@ -19,7 +12,15 @@ module.exports = {
         browser: true,
         node: true,
     },
-    plugins: ['react-hooks', '@typescript-eslint', 'import', 'react', 'cypress', 'dirnames'],
+    plugins: [
+        'prettier',
+        'react-hooks',
+        '@typescript-eslint',
+        'import',
+        'react',
+        'cypress',
+        'dirnames',
+    ],
     settings: {
         'import/resolver': {
             node: {
@@ -28,21 +29,14 @@ module.exports = {
         },
     },
     rules: {
-        // Правила форматирования. Так как мы используем prettier - эти правила нужны скорее для
-        // подсказок разработчику. Так же, потенциально, эти правила могут войти в конфликт с prettier.
-        // По дефолту все эти правила выключаются пресетами от prettier.
-        // Так что выставляем их в warn. Часть правил не включаем, так как они имеют слишком много
-        // вариаций и при любой конфигурации будут конфликтовать с prettier.
-        // indent ни в каких комбинациях я завести не смог на реальном проекте.
-        'react/jsx-indent': ['warn', 4],
-        'react/jsx-indent-props': ['warn', 4],
-        'react/jsx-curly-spacing': ['warn', 'never'],
         quotes: ['warn', 'single', { avoidEscape: true }],
         'comma-dangle': ['warn', 'always-multiline'],
         'comma-spacing': ['warn', { before: false, after: true }],
         'comma-style': ['warn', 'last'],
         'computed-property-spacing': ['warn', 'never'],
         'func-call-spacing': ['warn', 'never'],
+        indent: ['warn', 4],
+        'max-len': ['warn', { code: 100, ignoreComments: true }],
         'key-spacing': ['warn'],
         'no-trailing-spaces': ['warn'],
         'no-whitespace-before-property': ['warn'],
@@ -77,6 +71,9 @@ module.exports = {
         'max-nested-callbacks': 'warn',
 
         // React
+        'react/jsx-indent': ['warn', 4],
+        'react/jsx-indent-props': ['warn', 4],
+        'react/jsx-curly-spacing': ['warn', { when: 'always', children: true }],
         'react/jsx-fragments': ['warn', 'element'],
         'react/static-property-placement': ['error', 'static public field'],
         'react/state-in-constructor': ['error', 'never'],
