@@ -26,7 +26,7 @@ module.exports = {
         'react',
         'cypress',
         'dirnames',
-        'unicorn',
+        'check-filenames',
     ],
     settings: {
         'import/resolver': {
@@ -128,12 +128,7 @@ module.exports = {
         'import/no-unresolved': 'off',
         'import/extensions': 'off',
         'dirnames/match-kebab-case': 'error',
-        'unicorn/filename-case': [
-            'error',
-            {
-                case: 'kebabCase',
-            },
-        ],
+        'check-filenames/match-kebab-case': 'error',
     },
     overrides: [
         {
