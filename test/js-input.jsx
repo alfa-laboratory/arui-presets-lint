@@ -1,4 +1,5 @@
 /* eslint-disable no-console */
+import React from 'react';
 import babelCore from 'stylelint';
 
 function cn(target) {
@@ -41,3 +42,5 @@ console.log(babelCore.version);
 function definedAfterUsage() {
     console.log('Because it is normal!');
 }
+
+export const element = <div style={ { color: 'black' } } />;
