@@ -19,7 +19,7 @@ module.exports = {
         browser: true,
         node: true,
     },
-    plugins: ['react-hooks', '@typescript-eslint', 'import', 'react', 'cypress'],
+    plugins: ['react-hooks', '@typescript-eslint', 'import', 'react', 'cypress', 'dirnames'],
     settings: {
         'import/resolver': {
             node: {
@@ -119,6 +119,7 @@ module.exports = {
         'import/prefer-default-export': 'off',
         'import/no-unresolved': 'off',
         'import/extensions': 'off',
+        'dirnames/match-kebab-case': 'error',
     },
     overrides: [
         {
