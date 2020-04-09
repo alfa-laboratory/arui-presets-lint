@@ -1,3 +1,18 @@
+<a name="4.1.2"></a>
+## [4.1.2](https://github.com/alfa-laboratory/arui-presets-lint/compare/v4.1.1...v4.1.2) (2020-04-09)
+
+
+### Bug Fixes
+
+* **eslint:** added avoidEscape for quotes ([cbd63d8](https://github.com/alfa-laboratory/arui-presets-lint/commit/cbd63d8))
+
+
+### Features
+
+* add dirnames eslint rule ([d33eb66](https://github.com/alfa-laboratory/arui-presets-lint/commit/d33eb66))
+
+
+
 <a name="4.1.1"></a>
 ## [4.1.1](https://github.com/alfa-laboratory/arui-presets-lint/compare/v4.1.0...v4.1.1) (2020-04-06)
 
