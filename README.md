@@ -89,8 +89,8 @@ coverage
     },
     "husky": {
         "hooks": {
-            "pre-commit": "yarn lint-staged",
-            "commit-msg": "commitlint -e"
+            "pre-commit": "lint-staged",
+            "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
         }
     }
 }
@@ -112,8 +112,8 @@ coverage
     },
     "husky": {
         "hooks": {
-            "pre-commit": "yarn lint-staged",
-            "commit-msg": "commitlint -e"
+            "pre-commit": "lint-staged",
+            "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
         }
     },
     "prettier": "arui-presets-lint/prettier",
