@@ -1,23 +1,22 @@
-Alfa Laboratory UI Presets
-==========================
+# Alfa Laboratory UI Presets
 
 [![npm][npm-img]][npm]
 [![license][license-img]][license]
 [![travis][travis-img]][travis]
 
-[license]:         https://opensource.org/licenses/MIT
-[license-img]:     https://img.shields.io/badge/License-MIT-brightgreen.svg
-[npm-img]:         https://img.shields.io/npm/v/arui-presets-lint.svg
-[npm]:             https://www.npmjs.org/package/arui-presets-lint
-[travis]:          https://travis-ci.org/alfa-laboratory/arui-presets-lint?branch=master
-[travis-img]:      https://img.shields.io/travis/alfa-laboratory/arui-presets-lint/master.svg?label=unix
+[license]: https://opensource.org/licenses/MIT
+[license-img]: https://img.shields.io/badge/License-MIT-brightgreen.svg
+[npm-img]: https://img.shields.io/npm/v/arui-presets-lint.svg
+[npm]: https://www.npmjs.org/package/arui-presets-lint
+[travis]: https://travis-ci.org/alfa-laboratory/arui-presets-lint?branch=master
+[travis-img]: https://img.shields.io/travis/alfa-laboratory/arui-presets-lint/master.svg?label=unix
 
 <br />
 
 Набор конфигурационных файлов для валидации проектов, основанных на [arui-feather](https://github.com/alfa-laboratory/arui-feather).
 
-Установка
----------
+## Установка
+
 Для установки всех зависимостей проекта рекомендуется использовать [install-peerdeps](https://github.com/nathanhleung/install-peerdeps)
 
 ```
@@ -53,9 +52,7 @@ npm info "arui-presets-lint@latest" peerDependencies
         "extends": "arui-presets-lint/stylelint"
     },
     "commitlint": {
-        "extends": [
-            "./node_modules/arui-presets-lint/commitlint"
-        ]
+        "extends": ["./node_modules/arui-presets-lint/commitlint"]
     }
 }
 ```
@@ -68,7 +65,7 @@ npm info "arui-presets-lint@latest" peerDependencies
         "lint:css": "stylelint ./src/**/*.css",
         "lint:scripts": "eslint \"**/*.{js,jsx,ts,tsx}\" --ext .js,.jsx,.ts,.tsx",
         "lint": "yarn lint:css && yarn lint:scripts",
-        "format": "prettier --ignore-path \"./.gitignore\" --write \"./**/*.{ts,tsx,js,jsx,css}\""
+        "format": "prettier-eslint --ignore-path \"./.gitignore\" --write \"./**/*.{ts,tsx,js,jsx,css}\""
     }
 }
 ```
@@ -83,17 +80,12 @@ coverage
 ```
 
 ## Конфигурация `husky` и `lint-staged`:
+
 ```json
 {
     "lint-staged": {
-        "src/**/*.{js,jsx,ts,tsx}": [
-            "prettier --write",
-            "eslint"
-        ],
-        "*.css": [
-            "prettier --write",
-            "stylelint"
-        ]
+        "src/**/*.{js,jsx,ts,tsx}": ["prettier-eslint --write", "eslint"],
+        "*.css": ["prettier-eslint --write", "stylelint"]
     },
     "husky": {
         "hooks": {
@@ -105,23 +97,18 @@ coverage
 ```
 
 ## Итоговая конфигурация линтеров:
+
 ```json
 {
     "script": {
         "lint:css": "stylelint ./src/**/*.css",
         "lint:scripts": "eslint \"**/*.{js,jsx,ts,tsx}\" --ext .js,.jsx,.ts,.tsx",
         "lint": "yarn lint:css && yarn lint:scripts",
-        "format": "prettier --ignore-path \"./.gitignore\" --write \"./**/*.{ts,tsx,js,jsx,css}\""
+        "format": "prettier-eslint --ignore-path \"./.gitignore\" --write \"./**/*.{ts,tsx,js,jsx,css}\""
     },
     "lint-staged": {
-        "src/**/*.{js,jsx,ts,tsx}": [
-            "prettier --write",
-            "eslint"
-        ],
-        "*.css": [
-            "prettier --write",
-            "stylelint"
-        ]
+        "src/**/*.{js,jsx,ts,tsx}": ["prettier-eslint --write", "eslint"],
+        "*.css": ["prettier-eslint --write", "stylelint"]
     },
     "husky": {
         "hooks": {
@@ -137,15 +124,21 @@ coverage
         "extends": "arui-presets-lint/stylelint"
     },
     "commitlint": {
-        "extends": [
-            "./node_modules/arui-presets-lint/commitlint"
-        ]
+        "extends": ["./node_modules/arui-presets-lint/commitlint"]
     }
 }
 ```
 
-Лицензия
---------
+## Настройка для VS Code:
+
+https://github.com/prettier/prettier-vscode
+
+## Настройка для WebStorm:
+
+https://prettier.io/docs/en/webstorm.html#using-prettier-with-eslint
+Вместо `$ProjectFileDir$/node_modules/.bin/prettier` указывать `$ProjectFileDir$/node_modules/arui-presets-lint/node_modules/.bin/prettier-eslint`
+
+## Лицензия
 
 ```
 The MIT License (MIT)
