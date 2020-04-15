@@ -12,7 +12,15 @@ module.exports = {
         browser: true,
         node: true,
     },
-    plugins: ['react-hooks', '@typescript-eslint', 'import', 'react', 'cypress'],
+    plugins: [
+        'react-hooks',
+        '@typescript-eslint',
+        'import',
+        'react',
+        'cypress',
+        'dirnames',
+        'unicorn',
+    ],
     settings: {
         'import/resolver': {
             node: {
@@ -108,6 +116,13 @@ module.exports = {
         'import/prefer-default-export': 'off',
         'import/no-unresolved': 'off',
         'import/extensions': 'off',
+        'dirnames/match-kebab-case': 'error',
+        'unicorn/filename-case': [
+            'error',
+            {
+                case: 'kebabCase',
+            },
+        ],
     },
     overrides: [
         {
