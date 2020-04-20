@@ -65,7 +65,7 @@ npm info "arui-presets-lint@latest" peerDependencies
         "lint:css": "stylelint ./src/**/*.css",
         "lint:scripts": "eslint \"**/*.{js,jsx,ts,tsx}\" --ext .js,.jsx,.ts,.tsx",
         "lint": "yarn lint:css && yarn lint:scripts",
-        "format": "prettier-eslint --ignore-path \"./.gitignore\" --write \"./**/*.{ts,tsx,js,jsx,css}\""
+        "format": "prettier-eslint --write \"./{config,src}/**/*.{ts,tsx,js,jsx,json,css}\""
     }
 }
 ```
@@ -84,8 +84,8 @@ coverage
 ```json
 {
     "lint-staged": {
-        "src/**/*.{js,jsx,ts,tsx}": ["prettier-eslint --write", "eslint"],
-        "*.css": ["prettier-eslint --write", "stylelint"]
+        "src/**/*.{js,jsx,ts,tsx,json}": ["prettier-eslint --write", "git add", "eslint"],
+        "*.css": ["prettier-eslint --write", "git add", "stylelint"]
     },
     "husky": {
         "hooks": {
@@ -104,11 +104,11 @@ coverage
         "lint:css": "stylelint ./src/**/*.css",
         "lint:scripts": "eslint \"**/*.{js,jsx,ts,tsx}\" --ext .js,.jsx,.ts,.tsx",
         "lint": "yarn lint:css && yarn lint:scripts",
-        "format": "prettier-eslint --ignore-path \"./.gitignore\" --write \"./**/*.{ts,tsx,js,jsx,css}\""
+        "format": "prettier-eslint --write \"./{config,src}/**/*.{ts,tsx,js,jsx,json,css}\""
     },
     "lint-staged": {
-        "src/**/*.{js,jsx,ts,tsx}": ["prettier-eslint --write", "eslint"],
-        "*.css": ["prettier-eslint --write", "stylelint"]
+        "src/**/*.{js,jsx,ts,tsx,json}": ["prettier-eslint --write", "git add", "eslint"],
+        "*.css": ["prettier-eslint --write", "git add", "stylelint"]
     },
     "husky": {
         "hooks": {
