@@ -16,6 +16,8 @@ Alfa Laboratory UI Presets
 
 Набор конфигурационных файлов для валидации проектов, основанных на [arui-feather](https://github.com/alfa-laboratory/arui-feather).
 
+[Как мне поменять стандарты?](./.github/CONTRIBUTING.md)
+
 Установка
 ---------
 Для установки всех зависимостей проекта рекомендуется использовать [install-peerdeps](https://github.com/nathanhleung/install-peerdeps)
