@@ -15,8 +15,9 @@
 
 Набор конфигурационных файлов для валидации проектов, основанных на [arui-feather](https://github.com/alfa-laboratory/arui-feather).
 
-## Установка
+[Как я могу улучшить стандарты?](./.github/CONTRIBUTING.md)
 
+## Установка
 Для установки всех зависимостей проекта рекомендуется использовать [install-peerdeps](https://github.com/nathanhleung/install-peerdeps)
 
 ```
@@ -89,8 +90,8 @@ coverage
     },
     "husky": {
         "hooks": {
-            "pre-commit": "yarn lint-staged",
-            "commit-msg": "commitlint -e"
+            "pre-commit": "lint-staged",
+            "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
         }
     }
 }
@@ -112,8 +113,8 @@ coverage
     },
     "husky": {
         "hooks": {
-            "pre-commit": "yarn lint-staged",
-            "commit-msg": "commitlint -e"
+            "pre-commit": "lint-staged",
+            "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
         }
     },
     "prettier": "arui-presets-lint/prettier",

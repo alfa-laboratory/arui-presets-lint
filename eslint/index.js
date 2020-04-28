@@ -123,6 +123,12 @@ module.exports = {
                 case: 'kebabCase',
             },
         ],
+        'import/no-useless-path-segments': [
+            'error',
+            {
+                noUselessIndex: true,
+            },
+        ],
     },
     overrides: [
         {
