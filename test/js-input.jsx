@@ -43,4 +43,4 @@ function definedAfterUsage() {
     console.log('Because it is normal!');
 }
 
-export const element = <div style={ { color: 'black' } } />;
+export const element = <div style={ { color: 'black' } } prop='prop' />;

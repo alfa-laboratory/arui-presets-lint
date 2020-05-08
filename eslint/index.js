@@ -22,6 +22,7 @@ module.exports = {
     },
     rules: {
         quotes: ['warn', 'single', { avoidEscape: true }],
+        'jsx-quotes': ['error', 'prefer-single'],
         'comma-dangle': ['warn', 'always-multiline'],
         'comma-spacing': ['warn', { before: false, after: true }],
         'comma-style': ['warn', 'last'],
@@ -109,8 +110,8 @@ module.exports = {
         'import/no-unresolved': 'off',
         'import/extensions': 'off',
         'import/no-useless-path-segments': ['error', {
-            'noUselessIndex': true
-        }]
+            noUselessIndex: true,
+        }],
     },
     overrides: [
         {
