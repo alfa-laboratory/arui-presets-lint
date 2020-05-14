@@ -18,6 +18,7 @@
 [Как я могу улучшить стандарты?](./.github/CONTRIBUTING.md)
 
 ## Установка
+
 Для установки всех зависимостей проекта рекомендуется использовать [install-peerdeps](https://github.com/nathanhleung/install-peerdeps)
 
 ```
@@ -66,7 +67,7 @@ npm info "arui-presets-lint@latest" peerDependencies
         "lint:css": "stylelint ./src/**/*.css",
         "lint:scripts": "eslint \"**/*.{js,jsx,ts,tsx}\" --ext .js,.jsx,.ts,.tsx",
         "lint": "yarn lint:css && yarn lint:scripts",
-        "format": "prettier-eslint --ignore-path \"./.gitignore\" --write \"./**/*.{ts,tsx,js,jsx,css}\""
+        "format": "prettier-eslint --write \"$(pwd)/**/*.{ts,tsx,js,jsx,css}\""
     }
 }
 ```
@@ -105,7 +106,7 @@ coverage
         "lint:css": "stylelint ./src/**/*.css",
         "lint:scripts": "eslint \"**/*.{js,jsx,ts,tsx}\" --ext .js,.jsx,.ts,.tsx",
         "lint": "yarn lint:css && yarn lint:scripts",
-        "format": "prettier-eslint --ignore-path \"./.gitignore\" --write \"./**/*.{ts,tsx,js,jsx,css}\""
+        "format": "prettier-eslint --write \"$(pwd)/**/*.{ts,tsx,js,jsx,css}\""
     },
     "lint-staged": {
         "src/**/*.{js,jsx,ts,tsx}": ["prettier-eslint --write", "eslint"],
