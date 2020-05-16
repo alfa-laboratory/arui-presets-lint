@@ -3750,7 +3750,7 @@ meow@5.0.0, meow@^5.0.0:
     read-pkg-up "^3.0.0"
     redent "^2.0.0"
     trim-newlines "^2.0.0"
-    yargs-parser "^10.0.0"
+    yargs-parser "^18.1.1"
 
 meow@^3.3.0:
   version "3.7.0"
