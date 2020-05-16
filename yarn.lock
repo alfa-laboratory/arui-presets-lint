@@ -1917,12 +1917,12 @@ eslint-plugin-cypress@2.10.3:
   dependencies:
     globals "^11.12.0"
 
-eslint-plugin-dirnames@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-dirnames/-/eslint-plugin-dirnames-1.0.2.tgz#07df12f9498afaabd33c1d64434299d3188760f6"
-  integrity sha512-AcquzRpUe29hZboU4O/8EspvOpGwaKVXp1vipYpWZm64PkDEW0JTp+U8qwqtXr76asZnBRafXBTLqjxbD+lmpw==
+eslint-plugin-dirnames@1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-dirnames/-/eslint-plugin-dirnames-1.0.3.tgz#39db5aecfdc93e03bd309bd811d649c35190a9f9"
+  integrity sha512-6qsQbrrDlBz600QxOHcxtjiOjV5HD9YgTzHWDa5u/WlaocVywqyy2bSWpm/+3GyOigP7NUtrP1TgnpI7g8YQoQ==
   dependencies:
-    lodash.kebabcase "4.1.1"
+    kebab-case "1.0.0"
 
 eslint-plugin-import@2.20.2:
   version "2.20.2"
@@ -3407,6 +3407,11 @@ jsx-ast-utils@^2.2.1, jsx-ast-utils@^2.2.3:
     array-includes "^3.0.3"
     object.assign "^4.1.0"
 
+kebab-case@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/kebab-case/-/kebab-case-1.0.0.tgz#3f9e4990adcad0c686c0e701f7645868f75f91eb"
+  integrity sha1-P55JkK3K0MaGwOcB92RYaPdfkes=
+
 "kind-of@>= 6.0.3", kind-of@^3.0.2, kind-of@^3.0.3, kind-of@^4.0.0, kind-of@^5.0.0, kind-of@^6.0.0, kind-of@^6.0.2:
   version "6.0.3"
   resolved "https://registry.yarnpkg.com/kind-of/-/kind-of-6.0.3.tgz#07c05034a6c349fa06e24fa35aa76db4580ce4dd"
@@ -3567,11 +3572,6 @@ lodash.get@^4.4.2:
   version "4.4.2"
   resolved "https://registry.yarnpkg.com/lodash.get/-/lodash.get-4.4.2.tgz#2d177f652fa31e939b4438d5341499dfa3825e99"
   integrity sha1-LRd/ZS+jHpObRDjVNBSZ36OCXpk=
-
-lodash.kebabcase@4.1.1:
-  version "4.1.1"
-  resolved "https://registry.yarnpkg.com/lodash.kebabcase/-/lodash.kebabcase-4.1.1.tgz#8489b1cb0d29ff88195cceca448ff6d6cc295c36"
-  integrity sha1-hImxyw0p/4gZXM7KRI/21swpXDY=
 
 lodash.memoize@^4.1.2:
   version "4.1.2"
