@@ -13,8 +13,6 @@
         "command-line-args": "5.1.1",
         "conventional-changelog-cli": "1.3.21",
         "conventional-github-releaser": "2.0.2",
-        "eslint-plugin-dirnames": "1.0.3",
-        "eslint-plugin-unicorn": "^18.0.1",
         "stylelint-config-prettier": "^6.0.0",
         "stylelint-prettier": "^1.1.1"
     },
@@ -30,6 +28,8 @@
         "eslint-plugin-prettier": "^3.1.2",
         "eslint-plugin-react": "^7.19.0",
         "eslint-plugin-react-hooks": "^2.5.0",
+        "eslint-plugin-unicorn": "^18.0.1",
+        "eslint-plugin-dirnames": "^1.0.3",
         "prettier": "^1.19.1",
         "prettier-eslint": "^9.0.1",
         "prettier-eslint-cli": "^5.0.0",
