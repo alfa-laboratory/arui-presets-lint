@@ -62,7 +62,7 @@ npm info "arui-presets-lint@latest" peerDependencies
 
 ```json
 {
-    "script": {
+    "scripts": {
         "lint:css": "stylelint ./src/**/*.css",
         "lint:scripts": "eslint \"**/*.{js,jsx,ts,tsx}\" --ext .js,.jsx,.ts,.tsx",
         "lint": "yarn lint:css && yarn lint:scripts",
@@ -101,7 +101,7 @@ coverage
 
 ```json
 {
-    "script": {
+    "scripts": {
         "lint:css": "stylelint ./src/**/*.css",
         "lint:scripts": "eslint \"**/*.{js,jsx,ts,tsx}\" --ext .js,.jsx,.ts,.tsx",
         "lint": "yarn lint:css && yarn lint:scripts",
