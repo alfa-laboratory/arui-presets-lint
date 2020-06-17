@@ -40,6 +40,9 @@ module.exports = {
         'space-infix-ops': ['warn'],
         'space-unary-ops': ['warn'],
         'switch-colon-spacing': ['warn'],
+        // This rules conflicts with prettier formatter
+        'operator-linebreak': 'off',
+        'implicit-arrow-linebreak': 'off',
 
         // Override default airbnb rules
         'no-plusplus': ['error', { allowForLoopAfterthoughts: true }],
