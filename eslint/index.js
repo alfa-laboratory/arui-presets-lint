@@ -28,7 +28,6 @@ module.exports = {
         'computed-property-spacing': ['warn', 'never'],
         'func-call-spacing': ['warn', 'never'],
         indent: ['warn', 4],
-        'max-len': ['warn', { code: 100, ignoreComments: true }],
         'key-spacing': ['warn'],
         'no-trailing-spaces': ['warn'],
         'no-whitespace-before-property': ['warn'],
