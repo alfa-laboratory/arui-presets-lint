@@ -1,3 +1,14 @@
+<a name="4.2.1"></a>
+## [4.2.1](https://github.com/alfa-laboratory/arui-presets-lint/compare/v4.2.0...v4.2.1) (2020-06-22)
+
+
+### Bug Fixes
+
+* **eslint:** disable conflict rules ([d4b2af5](https://github.com/alfa-laboratory/arui-presets-lint/commit/d4b2af5))
+* **eslint:** remove max-len ([ab5be9c](https://github.com/alfa-laboratory/arui-presets-lint/commit/ab5be9c))
+
+
+
 <a name="4.2.0"></a>
 # [4.2.0](https://github.com/alfa-laboratory/arui-presets-lint/compare/v4.1.3...v4.2.0) (2020-04-30)
 
