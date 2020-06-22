@@ -43,6 +43,7 @@ module.exports = {
         // This rules conflicts with prettier formatter
         'operator-linebreak': 'off',
         'implicit-arrow-linebreak': 'off',
+        'max-len': 'off',
 
         // Override default airbnb rules
         'no-plusplus': ['error', { allowForLoopAfterthoughts: true }],
