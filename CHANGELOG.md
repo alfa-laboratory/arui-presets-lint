@@ -1,3 +1,13 @@
+<a name="4.2.2"></a>
+## [4.2.2](https://github.com/alfa-laboratory/arui-presets-lint/compare/v4.2.1...v4.2.2) (2020-06-22)
+
+
+### Bug Fixes
+
+* **eslint:** disable max-len explicitly ([e58103f](https://github.com/alfa-laboratory/arui-presets-lint/commit/e58103f))
+
+
+
 <a name="4.2.1"></a>
 ## [4.2.1](https://github.com/alfa-laboratory/arui-presets-lint/compare/v4.2.0...v4.2.1) (2020-06-22)
 
