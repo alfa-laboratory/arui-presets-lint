@@ -102,6 +102,10 @@ module.exports = {
             'error',
             { functions: false, classes: true, variables: true },
         ],
+        'no-useless-constructor': 'off',
+        '@typescript-eslint/no-useless-constructor': ['error'],
+        'no-unused-expressions': 'off',
+        '@typescript-eslint/no-unused-expressions': ['error'],
 
         // Imports, file extensions
         'import/no-extraneous-dependencies': [
@@ -112,8 +116,8 @@ module.exports = {
         'import/no-unresolved': 'off',
         'import/extensions': 'off',
         'import/no-useless-path-segments': ['error', {
-            'noUselessIndex': true
-        }]
+            noUselessIndex: true,
+        }],
     },
     overrides: [
         {
