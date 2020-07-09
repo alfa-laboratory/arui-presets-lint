@@ -1,3 +1,13 @@
+<a name="4.2.3"></a>
+## [4.2.3](https://github.com/alfa-laboratory/arui-presets-lint/compare/v4.2.2...v4.2.3) (2020-07-09)
+
+
+### Features
+
+* **upgrade:** upgraded a library ([#75](https://github.com/alfa-laboratory/arui-presets-lint/issues/75)) ([a8fb323](https://github.com/alfa-laboratory/arui-presets-lint/commit/a8fb323))
+
+
+
 <a name="4.2.2"></a>
 ## [4.2.2](https://github.com/alfa-laboratory/arui-presets-lint/compare/v4.2.1...v4.2.2) (2020-06-22)
 
