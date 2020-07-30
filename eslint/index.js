@@ -27,7 +27,7 @@ module.exports = {
         'comma-style': ['warn', 'last'],
         'computed-property-spacing': ['warn', 'never'],
         'func-call-spacing': ['warn', 'never'],
-        indent: ['warn', 4],
+        indent: ['warn', 4, { SwitchCase: 1 }],
         'key-spacing': ['warn'],
         'no-trailing-spaces': ['warn'],
         'no-whitespace-before-property': ['warn'],
@@ -111,9 +111,12 @@ module.exports = {
         'import/prefer-default-export': 'off',
         'import/no-unresolved': 'off',
         'import/extensions': 'off',
-        'import/no-useless-path-segments': ['error', {
-            'noUselessIndex': true
-        }]
+        'import/no-useless-path-segments': [
+            'error',
+            {
+                noUselessIndex: true,
+            },
+        ],
     },
     overrides: [
         {
