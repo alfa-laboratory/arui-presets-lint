@@ -3,11 +3,10 @@ dist: trusty
 language: node_js
 
 node_js:
-  - "8.9.1"
-  - "6.12.1"
+  - "10"
 
 before_install:
-  - npm i -g npm@5
+  - npm i -g npm@6
   - npm i -g greenkeeper-lockfile@1
 
 install:
