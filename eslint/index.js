@@ -1,6 +1,10 @@
 module.exports = {
     parser: '@typescript-eslint/parser',
-    extends: ['airbnb', 'airbnb/hooks', 'plugin:@typescript-eslint/recommended'],
+    extends: [
+        'airbnb-typescript',
+        'airbnb/hooks',
+        'plugin:@typescript-eslint/recommended',
+    ],
     parserOptions: {
         ecmaVersion: 2018,
         sourceType: 'module',
@@ -86,12 +90,12 @@ module.exports = {
         'jsx-a11y/label-has-for': ['error', { components: ['label'], allowChildren: true }],
 
         // typescript
+        '@typescript-eslint/indent': ['warn', 4],
         '@typescript-eslint/explicit-function-return-type': 'off',
         '@typescript-eslint/array-type': [
             'error',
             { default: 'array-simple', readonly: 'array-simple' },
         ],
-        '@typescript-eslint/class-name-casing': 'error',
         '@typescript-eslint/type-annotation-spacing': 'error',
         '@typescript-eslint/member-delimiter-style': 'error',
         '@typescript-eslint/consistent-type-assertions': 'error',
