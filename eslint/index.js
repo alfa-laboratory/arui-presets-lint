@@ -32,7 +32,7 @@ module.exports = {
         'comma-style': ['warn', 'last'],
         'computed-property-spacing': ['warn', 'never'],
         'func-call-spacing': ['warn', 'never'],
-        indent: ['warn', 4],
+        indent: ['warn', 4, { SwitchCase: 1 }],
         'key-spacing': ['warn'],
         'no-trailing-spaces': ['warn'],
         'no-whitespace-before-property': ['warn'],
@@ -91,7 +91,7 @@ module.exports = {
         'jsx-a11y/label-has-for': ['error', { components: ['label'], allowChildren: true }],
 
         // typescript
-        '@typescript-eslint/indent': ['warn', 4],
+        '@typescript-eslint/indent': ['warn', 4, { SwitchCase: 1 }],
         '@typescript-eslint/explicit-module-boundary-types': 'off',
         '@typescript-eslint/explicit-function-return-type': 'off',
         '@typescript-eslint/array-type': [
