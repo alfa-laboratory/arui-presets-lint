@@ -1,6 +1,6 @@
 {
     "name": "arui-presets-lint",
-    "version": "4.2.0",
+    "version": "4.2.3",
     "description": "Config files for arui-apps",
     "author": "Good guys from Alfa-Bank",
     "license": "MIT",
@@ -23,7 +23,7 @@
         "eslint-config-airbnb": "^18.0.1",
         "eslint-import-resolver-typescript": "^2.0.0",
         "eslint-plugin-cypress": "2.10.3",
-        "eslint-plugin-import": "^2.20.2",
+        "eslint-plugin-import": "^2.22.0",
         "eslint-plugin-jsx-a11y": "^6.2.3",
         "eslint-plugin-prettier": "^3.1.2",
         "eslint-plugin-react": "^7.19.0",
@@ -44,7 +44,7 @@
         "eslint-plugin-cypress": "2.10.3",
         "eslint-plugin-dirnames": "1.0.3",
         "eslint-plugin-unicorn": "18.0.1",
-        "eslint-plugin-import": "2.20.2",
+        "eslint-plugin-import": "2.22.0",
         "eslint-plugin-jsx-a11y": "6.2.3",
         "eslint-plugin-prettier": "3.1.2",
         "eslint-plugin-react": "7.19.0",
@@ -103,7 +103,6 @@
     "husky": {
         "hooks": {
             "pre-commit": "yarn test",
-            "pre-push": "yarn audit",
             "commit-msg": "commitlint -e"
         }
     },

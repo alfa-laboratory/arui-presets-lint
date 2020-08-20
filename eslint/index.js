@@ -36,7 +36,6 @@ module.exports = {
         'computed-property-spacing': ['warn', 'never'],
         'func-call-spacing': ['warn', 'never'],
         indent: ['warn', 4],
-        'max-len': ['warn', { code: 100, ignoreComments: true }],
         'key-spacing': ['warn'],
         'no-trailing-spaces': ['warn'],
         'no-whitespace-before-property': ['warn'],
@@ -49,6 +48,10 @@ module.exports = {
         'space-infix-ops': ['warn'],
         'space-unary-ops': ['warn'],
         'switch-colon-spacing': ['warn'],
+        // This rules conflicts with prettier formatter
+        'operator-linebreak': 'off',
+        'implicit-arrow-linebreak': 'off',
+        'max-len': 'off',
 
         // Override default airbnb rules
         'no-plusplus': ['error', { allowForLoopAfterthoughts: true }],
