@@ -58,6 +58,18 @@ npm info "arui-presets-lint@latest" peerDependencies
 }
 ```
 
+## Конфигурация eslint без react
+Если вы делаете библиотеку, не использующую реакт, вам могут быть лишними те правила, которые
+требуют наличия реакта. Для этого вы можете использовать другой конфиг:
+
+```json
+{
+    "eslintConfig": {
+        "extends": "./node_modules/arui-presets-lint/eslint/base.js"
+    }
+}
+```
+
 ## Конфигурация скриптов для запуска линтеров и форматтера в `package.json`:
 
 ```json

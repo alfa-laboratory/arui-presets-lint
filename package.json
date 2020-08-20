@@ -62,8 +62,9 @@
         "release-patch": "npm version patch -m 'chore(*): patch version'",
         "release-minor": "npm version minor -m 'chore(*): minor version'",
         "release-major": "npm version major -m 'chore(*): major version'",
-        "test": "yarn test:eslint && yarn test:stylelint",
-        "test:eslint": "eslint \"./test/**/*.{ts,tsx,js,jsx}\"",
+        "test": "yarn test:eslint:base && yarn test:eslint:react && yarn test:stylelint",
+        "test:eslint:base": "eslint -c './eslint/base.js' \"./test/**/*.{ts,js}\"",
+        "test:eslint:react": "eslint -c './eslint/index.js' \"./test/**/*.{tsx,jsx}\"",
         "test:stylelint": "node ./test/stylelint-test.js",
         "version": "git fetch --tags && npm run changelog && git add CHANGELOG.md",
         "format": "prettier-eslint --write \"./{eslint,stylelint,test,commitlint}/**/*.{ts,tsx,js,jsx,css}\""
