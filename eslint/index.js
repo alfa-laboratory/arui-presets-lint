@@ -91,7 +91,7 @@ module.exports = {
         'jsx-a11y/label-has-for': ['error', { components: ['label'], allowChildren: true }],
 
         // typescript
-        // '@typescript-eslint/indent': ['warn', 4],
+        '@typescript-eslint/indent': ['warn', 4],
         '@typescript-eslint/explicit-module-boundary-types': 'off',
         '@typescript-eslint/explicit-function-return-type': 'off',
         '@typescript-eslint/array-type': [
