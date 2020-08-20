@@ -88,7 +88,7 @@ module.exports = {
 
         // A11Y
         'jsx-a11y/anchor-is-valid': ['warn', { aspects: ['invalidHref'] }],
-        'jsx-a11y/label-has-for': ['error', { components: ['label'], allowChildren: true }],
+        'jsx-a11y/label-has-associated-control': ['error', { labelComponents: ['label'], assert: 'either' }],
 
         // typescript
         '@typescript-eslint/indent': ['warn', 4, { SwitchCase: 1 }],
