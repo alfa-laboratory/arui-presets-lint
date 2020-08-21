@@ -12,7 +12,14 @@ module.exports = {
         browser: true,
         node: true,
     },
-    plugins: ['react-hooks', '@typescript-eslint', 'import', 'react', 'cypress'],
+    plugins: [
+        'react-hooks',
+        '@typescript-eslint',
+        'import',
+        'react',
+        'cypress',
+        'simple-import-sort',
+    ],
     settings: {
         'import/resolver': {
             node: {
@@ -83,7 +90,10 @@ module.exports = {
 
         // A11Y
         'jsx-a11y/anchor-is-valid': ['warn', { aspects: ['invalidHref'] }],
-        'jsx-a11y/label-has-associated-control': ['error', { labelComponents: ['label'], assert: 'either' }],
+        'jsx-a11y/label-has-associated-control': [
+            'error',
+            { labelComponents: ['label'], assert: 'either' },
+        ],
 
         // typescript
         '@typescript-eslint/explicit-function-return-type': 'off',
@@ -111,9 +121,36 @@ module.exports = {
         'import/prefer-default-export': 'off',
         'import/no-unresolved': 'off',
         'import/extensions': 'off',
-        'import/no-useless-path-segments': ['error', {
-            'noUselessIndex': true
-        }]
+        'import/no-useless-path-segments': [
+            'error',
+            {
+                noUselessIndex: true,
+            },
+        ],
+        'simple-import-sort/sort': [
+            'warn',
+            {
+                groups: [
+                    // Node.js builtins. You could also generate this regex if you use a `.js` config.
+                    // For example: `^(${require("module").builtinModules.join("|")})(/|$)`
+                    [
+                        '^(assert|buffer|child_process|cluster|console|constants|crypto|dgram|dns|domain|events|fs|http|https|module|net|os|path|punycode|querystring|readline|repl|stream|string_decoder|sys|timers|tls|tty|url|util|vm|zlib|freelist|v8|process|async_hooks|http2|perf_hooks)(/.*|$)',
+                    ],
+                    // Packages. `react` related packages come first.
+                    ['^react', '^redux', '^@?\\w'],
+                    // Components.
+                    ['^arui-(feather|private)(/?.*|$)'],
+                    // Root path for project
+                    ['^#'],
+                    // Parent imports. Put `..` last.
+                    ['^\\.\\.(?!/?$)', '^\\.\\./?$'],
+                    // Other relative imports. Put same-folder imports and `.` last.
+                    ['^\\./(?=.*/)(?!/?$)', '^\\.(?!/?$)', '^\\./?$'],
+                    // Style imports.
+                    ['^.+\\.s?css$'],
+                ],
+            },
+        ],
     },
     overrides: [
         {

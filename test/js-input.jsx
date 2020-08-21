@@ -2,9 +2,7 @@
 import React from 'react';
 import babelCore from 'stylelint';
 
-function cn(target) {
-    return target;
-}
+import cn from './cn';
 
 const someArray = [
     'hello',
