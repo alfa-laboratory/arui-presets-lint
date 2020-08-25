@@ -54,18 +54,12 @@
         "typescript": "3.9.7"
     },
     "scripts": {
-        "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
         "github-release": "conventional-github-releaser -p angular",
         "lint": "eslint ./",
-        "postversion": "git push origin master && git push --tags && npm publish",
         "precommit": "lint-staged",
-        "release-patch": "npm version patch -m 'chore(*): patch version'",
-        "release-minor": "npm version minor -m 'chore(*): minor version'",
-        "release-major": "npm version major -m 'chore(*): major version'",
         "test": "yarn test:eslint && yarn test:stylelint",
         "test:eslint": "eslint \"./test/**/*.{ts,tsx,js,jsx}\"",
         "test:stylelint": "node ./test/stylelint-test.js",
-        "version": "git fetch --tags && npm run changelog && git add CHANGELOG.md",
         "format": "prettier-eslint --write \"./{eslint,stylelint,test,commitlint}/**/*.{ts,tsx,js,jsx,css}\""
     },
     "lint-staged": {
