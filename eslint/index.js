@@ -113,7 +113,8 @@ module.exports = {
         'import/extensions': 'off',
         'import/no-useless-path-segments': ['error', {
             'noUselessIndex': true
-        }]
+        }],
+        'no-param-reassign': 'off'
     },
     overrides: [
         {
