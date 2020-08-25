@@ -112,8 +112,8 @@ module.exports = {
         'import/no-unresolved': 'off',
         'import/extensions': 'off',
         'import/no-useless-path-segments': ['error', {
-            'noUselessIndex': true
-        }]
+            noUselessIndex: true,
+        }],
     },
     overrides: [
         {
