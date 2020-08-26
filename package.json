@@ -66,7 +66,7 @@
         "test": "yarn test:eslint && yarn test:stylelint",
         "test:eslint": "eslint \"./test/**/*.{ts,tsx,js,jsx}\"",
         "test:stylelint": "node ./test/stylelint-test.js",
-        "format": "prettier-eslint --write \"./{eslint,stylelint,test,commitlint}/**/*.{ts,tsx,js,jsx,css}\""
+        "format": "prettier-eslint --write $INIT_CWD/{eslint,stylelint,test,commitlint}/**/*.{ts,tsx,js,jsx,css}"
     },
     "lint-staged": {
         "**/*.{js,jsx,ts,tsx,css}": [
