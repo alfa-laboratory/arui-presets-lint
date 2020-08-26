@@ -1,3 +1,26 @@
+# [5.0.0](https://github.com/alfa-laboratory/arui-presets-lint/compare/v4.3.0...v5.0.0) (2020-08-26)
+
+
+### Bug Fixes
+
+* adds all deleted dependencies ([823a275](https://github.com/alfa-laboratory/arui-presets-lint/commit/823a2757ffa4f99c4c8ba6062ce9df926cde0858))
+
+
+### Features
+
+* add some rules ([7e1ec33](https://github.com/alfa-laboratory/arui-presets-lint/commit/7e1ec3380f5e2993fbe4032a42cd2699aaf8cbb8))
+* add some rules ([ecec52a](https://github.com/alfa-laboratory/arui-presets-lint/commit/ecec52a6d7184c795f4e78bec55845f95e51d24f))
+* resolve yarn.lock ([85b5ae7](https://github.com/alfa-laboratory/arui-presets-lint/commit/85b5ae771c4c8a08f9a30aad486a22a9934a116c))
+* **eslint:** add .eslintrc.js in .eslintignore ([b22988a](https://github.com/alfa-laboratory/arui-presets-lint/commit/b22988a6a3b1e3afed54f76a4de3a85d63ff607d))
+* **eslint:** removed node.js v8.* support ([abb7ed8](https://github.com/alfa-laboratory/arui-presets-lint/commit/abb7ed834518d82e47448f9fe91e5bd267d0f1ce))
+* **eslint:** update config for eslint ([cad9237](https://github.com/alfa-laboratory/arui-presets-lint/commit/cad92374b6db1ea1db9d2f80eaaf0407f6dbb7fb))
+* **eslint:** update deps ([5516c1c](https://github.com/alfa-laboratory/arui-presets-lint/commit/5516c1c16b51e471d89fd76b895c93ceb0acb750))
+
+
+### BREAKING CHANGES
+
+* dropped node.js 8 support, eslint was updated from 6 to 7
+
 # [4.3.0](https://github.com/alfa-laboratory/arui-presets-lint/compare/v4.2.3...v4.3.0) (2020-08-24)
 
 
