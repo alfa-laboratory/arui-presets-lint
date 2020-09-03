@@ -10,10 +10,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
       - name: create new version
         run: yarn --frozen-lockfile && yarn semantic-release
         env:
-          GITHUB_TOKEN: ${{ secrets.PERMISSION_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           WORK_SPACE: ${{ github.workspace }}
           CI: true
