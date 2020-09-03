@@ -1,7 +1,8 @@
 module.exports = {
     parser: '@typescript-eslint/parser',
-    extends: ['airbnb', 'airbnb/hooks', 'plugin:@typescript-eslint/recommended'],
+    extends: ['airbnb-typescript', 'airbnb/hooks', 'plugin:@typescript-eslint/recommended'],
     parserOptions: {
+        project: './tsconfig.json',
         ecmaVersion: 2018,
         sourceType: 'module',
         ecmaFeatures: {
@@ -34,7 +35,7 @@ module.exports = {
         'comma-style': ['warn', 'last'],
         'computed-property-spacing': ['warn', 'never'],
         'func-call-spacing': ['warn', 'never'],
-        indent: ['warn', 4],
+        indent: ['warn', 4, { SwitchCase: 1 }],
         'key-spacing': ['warn'],
         'no-trailing-spaces': ['warn'],
         'no-whitespace-before-property': ['warn'],
@@ -96,12 +97,13 @@ module.exports = {
         ],
 
         // typescript
+        '@typescript-eslint/indent': ['warn', 4, { SwitchCase: 1 }],
+        '@typescript-eslint/explicit-module-boundary-types': 'off',
         '@typescript-eslint/explicit-function-return-type': 'off',
         '@typescript-eslint/array-type': [
             'error',
             { default: 'array-simple', readonly: 'array-simple' },
         ],
-        '@typescript-eslint/class-name-casing': 'error',
         '@typescript-eslint/type-annotation-spacing': 'error',
         '@typescript-eslint/member-delimiter-style': 'error',
         '@typescript-eslint/consistent-type-assertions': 'error',
@@ -118,6 +120,7 @@ module.exports = {
             'error',
             { devDependencies: ['**/*.{stories,test,tests,spec}.{js,jsx,ts,tsx}'] },
         ],
+        'import/no-cycle': 'off',
         'import/prefer-default-export': 'off',
         'import/no-unresolved': 'off',
         'import/extensions': 'off',
@@ -139,7 +142,7 @@ module.exports = {
                     // Packages. `react` related packages come first.
                     ['^react', '^redux', '^@?\\w'],
                     // Components.
-                    ['^arui-(feather|private)(/?.*|$)'],
+                    ['@alfalab/*', '^arui-(feather|private)(/?.*|$)'],
                     // Root path for project
                     ['^#'],
                     // Parent imports. Put `..` last.
