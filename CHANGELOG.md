@@ -1,3 +1,10 @@
+# [5.1.0](https://github.com/alfa-laboratory/arui-presets-lint/compare/v5.0.0...v5.1.0) (2020-09-03)
+
+
+### Features
+
+* update prettier, stylelint ([55b3aa4](https://github.com/alfa-laboratory/arui-presets-lint/commit/55b3aa472c3c584bf1606c765d20acd348ad06a0))
+
 # [5.0.0](https://github.com/alfa-laboratory/arui-presets-lint/compare/v4.3.0...v5.0.0) (2020-08-26)
 
 
