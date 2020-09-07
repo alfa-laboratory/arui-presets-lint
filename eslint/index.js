@@ -1,10 +1,6 @@
 module.exports = {
     parser: '@typescript-eslint/parser',
-    extends: [
-        'airbnb-typescript',
-        'airbnb/hooks',
-        'plugin:@typescript-eslint/recommended',
-    ],
+    extends: ['airbnb-typescript', 'airbnb/hooks', 'plugin:@typescript-eslint/recommended'],
     parserOptions: {
         project: './tsconfig.json',
         ecmaVersion: 2018,
@@ -88,7 +84,10 @@ module.exports = {
 
         // A11Y
         'jsx-a11y/anchor-is-valid': ['warn', { aspects: ['invalidHref'] }],
-        'jsx-a11y/label-has-associated-control': ['error', { labelComponents: ['label'], assert: 'either' }],
+        'jsx-a11y/label-has-associated-control': [
+            'error',
+            { labelComponents: ['label'], assert: 'either' },
+        ],
 
         // typescript
         '@typescript-eslint/indent': ['warn', 4, { SwitchCase: 1 }],
@@ -118,9 +117,12 @@ module.exports = {
         'import/prefer-default-export': 'off',
         'import/no-unresolved': 'off',
         'import/extensions': 'off',
-        'import/no-useless-path-segments': ['error', {
-            noUselessIndex: true,
-        }],
+        'import/no-useless-path-segments': [
+            'error',
+            {
+                noUselessIndex: true,
+            },
+        ],
     },
     overrides: [
         {

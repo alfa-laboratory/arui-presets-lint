@@ -15,7 +15,7 @@
 все субъективные моменты. Мы не можем менять правила только потому что вам так привычнее.
 
 ## Кто принимает решения?
-Принимает решения тут группа [@alfa-laboratory/frontstandarts](https://github.com/orgs/alfa-laboratory/teams/frontstandarts).
+Принимает решения тут группа [@alfa-laboratory/frontstandards](https://github.com/orgs/alfa-laboratory/teams/frontstandards).
 Все изменения будут проходить через них.
 
 Стандартно каждый пул-реквест будет назначаться на 3 случайных людей из этой группы.
