@@ -1,6 +1,7 @@
 name: Create new library package 
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - master
