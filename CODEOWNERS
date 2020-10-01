@@ -1,3 +1,4 @@
-* @alfa-laboratory/frontstandards
-
-package.json @semantic-release-bot
+*.js @alfa-laboratory/frontstandards
+*.ts @alfa-laboratory/frontstandards
+*.tsx @alfa-laboratory/frontstandards
+*.jsx @alfa-laboratory/frontstandards
