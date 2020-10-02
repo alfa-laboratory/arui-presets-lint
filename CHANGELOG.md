@@ -1,3 +1,14 @@
+## [5.3.1](https://github.com/alfa-laboratory/arui-presets-lint/compare/v5.3.0...v5.3.1) (2020-10-02)
+
+
+### Bug Fixes
+
+* adds new package for semantic-release ([e999b7b](https://github.com/alfa-laboratory/arui-presets-lint/commit/e999b7b7591c7d2eacbcb2a13d903ecb6855c895))
+* adds token for npm-publish ([73ccf46](https://github.com/alfa-laboratory/arui-presets-lint/commit/73ccf46f0325d21eea8875e38756d78ef23d7add))
+* changed rules for codeowners ([8d40eb0](https://github.com/alfa-laboratory/arui-presets-lint/commit/8d40eb0fb1d26440e751809d5cdaf85ae68f1094))
+* changed rules for CODEOWNERS ([7d7cd38](https://github.com/alfa-laboratory/arui-presets-lint/commit/7d7cd3889e30ce08d8bac2367cc3ffc9da46cb1b))
+* changed version ([26adf63](https://github.com/alfa-laboratory/arui-presets-lint/commit/26adf632ce7e79bb821aab5272c22bfed8c5f66b))
+
 # [5.1.0](https://github.com/alfa-laboratory/arui-presets-lint/compare/v5.0.0...v5.1.0) (2020-09-03)
 
 
