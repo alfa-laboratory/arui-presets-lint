@@ -85,8 +85,8 @@ coverage
 ```json
 {
     "lint-staged": {
-        "{src,config}/**/*.{js,jsx,ts,tsx}": ["prettier-eslint --write", "git add", "eslint"],
-        "*.css": ["prettier-eslint --write", "git add", "stylelint"]
+        "{src,config}/**/*.{js,jsx,ts,tsx}": ["prettier-eslint --write", "eslint"],
+        "*.css": ["prettier-eslint --write", "stylelint"]
     },
     "husky": {
         "hooks": {
@@ -108,8 +108,8 @@ coverage
         "format": "prettier-eslint --write $INIT_CWD/{config,src}/**/*.{ts,tsx,js,jsx,css}"
     },
     "lint-staged": {
-        "{src,config}/**/*.{js,jsx,ts,tsx}": ["prettier-eslint --write", "git add", "eslint"],
-        "*.css": ["prettier-eslint --write", "git add", "stylelint"]
+        "{src,config}/**/*.{js,jsx,ts,tsx}": ["prettier-eslint --write", "eslint"],
+        "*.css": ["prettier-eslint --write", "stylelint"]
     },
     "husky": {
         "hooks": {
