@@ -1275,10 +1275,10 @@ arrify@^2.0.1:
   resolved "https://registry.yarnpkg.com/arrify/-/arrify-2.0.1.tgz#c9655e9331e0abcd588d2a7cad7e9956f66701fa"
   integrity sha512-3duEwti880xqi4eAMN8AyR4a0ByT90zoYdLlevfrvU43vb0YZwZVfxOgxWrLXXXpyugL0hNZc9G6BiB5B3nUug==
 
-arui-cssvars@1.1.7:
-  version "1.1.7"
-  resolved "https://registry.yarnpkg.com/arui-cssvars/-/arui-cssvars-1.1.7.tgz#c132b407af688e100b537e4e9cf068729510df78"
-  integrity sha512-7WRFTgdYU1BC3oVM0TG1OLg0lyHyriukMqOtWlSX25wLTRJPX9p+ayW0JKbtb7Xw0elOtnYlLtMq9tPp83j/qw==
+arui-cssvars@1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/arui-cssvars/-/arui-cssvars-1.2.0.tgz#08e3f5cf8228bcd932d5fbe41befa746f21a2c1a"
+  integrity sha512-TqDsAL/GxXkKsLXKLZIwz4yHaUZipaUtXlcbsRezHvAlf4FCNmhavDEMJpindUM0MNw2uchN0Y4j3AeeVW2sZA==
 
 asap@^2.0.0:
   version "2.0.6"
