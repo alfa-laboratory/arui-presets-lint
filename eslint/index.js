@@ -57,17 +57,10 @@ module.exports = {
         'no-plusplus': ['error', { allowForLoopAfterthoughts: true }],
         'no-negated-condition': 'warn',
         'default-case': 'off',
-        'no-use-before-define': [
-            'error',
-            {
-                functions: false,
-                classes: true,
-                variables: true,
-            },
-        ],
+        'no-use-before-define': 'off',
 
         // rules should be transformed to errors
-        'no-shadow': 'warn',
+        'no-shadow': 'off',
 
         // code smell detection
         complexity: ['warn', 20],
@@ -114,6 +107,7 @@ module.exports = {
             'error',
             { functions: false, classes: true, variables: true },
         ],
+        '@typescript-eslint/no-shadow': ['warn'],
 
         // Imports, file extensions
         'import/no-extraneous-dependencies': [
