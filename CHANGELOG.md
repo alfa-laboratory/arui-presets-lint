@@ -1,3 +1,10 @@
+# [5.4.0](https://github.com/alfa-laboratory/arui-presets-lint/compare/v5.3.1...v5.4.0) (2020-12-14)
+
+
+### Features
+
+* disable jsx-one-expression-per-line ([bcba37b](https://github.com/alfa-laboratory/arui-presets-lint/commit/bcba37b9516306011a8914403814990d6336d7e8))
+
 ## [5.3.1](https://github.com/alfa-laboratory/arui-presets-lint/compare/v5.3.0...v5.3.1) (2020-10-02)
 
 
