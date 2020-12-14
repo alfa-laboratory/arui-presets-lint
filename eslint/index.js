@@ -88,6 +88,7 @@ module.exports = {
         'react/prefer-stateless-function': 'off',
         'react/destructuring-assignment': 'off',
         'react/jsx-filename-extension': [1, { extensions: ['.jsx', '.tsx'] }],
+        'react/jsx-one-expression-per-line': 'off',
 
         // A11Y
         'jsx-a11y/anchor-is-valid': ['warn', { aspects: ['invalidHref'] }],
