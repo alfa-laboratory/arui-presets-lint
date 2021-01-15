@@ -98,7 +98,11 @@ module.exports = {
         ],
 
         // typescript
-        '@typescript-eslint/indent': ['warn', 4, { SwitchCase: 1 }],
+        '@typescript-eslint/indent': ['warn', 4, {
+            SwitchCase: 1,
+            ignoredNodes: ['TSTypeParameterInstantiation'],
+        },
+        ],
         '@typescript-eslint/explicit-module-boundary-types': 'off',
         '@typescript-eslint/explicit-function-return-type': 'off',
         '@typescript-eslint/array-type': [
