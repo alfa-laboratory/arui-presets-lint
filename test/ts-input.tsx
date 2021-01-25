@@ -32,3 +32,10 @@ class SuperCache<T> implements CacheHostGeneric<T> {
 const cache = new SuperCache<number>();
 
 addTypedObjectToCache(123, cache);
+
+type PickedCacheHost = Required<
+    Pick<
+        CacheHostGeneric<string>,
+        'save'
+    >
+>;
