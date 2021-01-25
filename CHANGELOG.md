@@ -1,3 +1,10 @@
+## [5.4.1](https://github.com/alfa-laboratory/arui-presets-lint/compare/v5.4.0...v5.4.1) (2021-01-25)
+
+
+### Bug Fixes
+
+* **eslint:** add ignore typescript generic type params ([f7c1d35](https://github.com/alfa-laboratory/arui-presets-lint/commit/f7c1d354234a1f7bec7da1c157333b97bccf6bdc))
+
 # [5.4.0](https://github.com/alfa-laboratory/arui-presets-lint/compare/v5.3.1...v5.4.0) (2020-12-14)
 
 
