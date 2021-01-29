@@ -79,6 +79,8 @@ npm info "arui-presets-lint@latest" peerDependencies
 coverage
 ```
 
+Для запуска eslint рекомендуется использовать флаг [--max-warnings](https://eslint.org/docs/2.0.0/user-guide/command-line-interface#-max-warnings), который позволяет ограничить количество возникающих предупреждений.
+
 ## Конфигурация `husky` и `lint-staged`:
 
 ```json
