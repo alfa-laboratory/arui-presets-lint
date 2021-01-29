@@ -2,7 +2,6 @@
 
 [![npm][npm-img]][npm]
 [![license][license-img]][license]
-[![travis][travis-img]][travis]
 
 [license]: https://opensource.org/licenses/MIT
 [license-img]: https://img.shields.io/badge/License-MIT-brightgreen.svg
