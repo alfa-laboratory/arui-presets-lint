@@ -146,7 +146,7 @@ https://prettier.io/docs/en/webstorm.html#using-prettier-with-eslint
 ```
 The MIT License (MIT)
 
-Copyright (c) 2020 Alfa-Bank
+Copyright (c) 2021 Alfa-Bank
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
