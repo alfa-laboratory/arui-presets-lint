@@ -1,3 +1,10 @@
+# [5.5.0](https://github.com/alfa-laboratory/arui-presets-lint/compare/v5.4.1...v5.5.0) (2021-02-12)
+
+
+### Features
+
+* **eslint:** add padding-line-between-statements rule ([46da359](https://github.com/alfa-laboratory/arui-presets-lint/commit/46da3591c67a6d44db73516d14419852837c4faa))
+
 ## [5.4.1](https://github.com/alfa-laboratory/arui-presets-lint/compare/v5.4.0...v5.4.1) (2021-01-25)
 
 
