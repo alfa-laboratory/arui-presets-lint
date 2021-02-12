@@ -14,6 +14,7 @@ function addTypedObjectToCache<Type, Cache extends CacheHostGeneric<Type>>(
     cache: Cache,
 ): Cache {
     cache.save(obj);
+
     return cache;
 }
 

@@ -39,6 +39,12 @@ module.exports = {
         'key-spacing': ['warn'],
         'no-trailing-spaces': ['warn'],
         'no-whitespace-before-property': ['warn'],
+        'padding-line-between-statements': [
+            'warn',
+            { blankLine: 'always', prev: ['const', 'let', 'var'], next: '*' },
+            { blankLine: 'always', prev: '*', next: 'return' },
+            { blankLine: 'any', prev: ['const', 'let', 'var'], next: ['const', 'let', 'var'] },
+        ],
         'quote-props': ['warn', 'as-needed'],
         semi: ['warn'],
         'semi-spacing': ['warn'],
