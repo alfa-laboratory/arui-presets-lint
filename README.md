@@ -97,7 +97,7 @@ coverage
     }
 }
 ```
-В lint-staged так же рекомендуется добавить запуск юнит-тестов, например, `yarn karma --findRelatedTests`
+В lint-staged так же рекомендуется добавить запуск юнит-тестов, например, `yarn jest --findRelatedTests`
 
 ## Итоговая конфигурация линтеров:
 
