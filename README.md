@@ -2,7 +2,6 @@
 
 [![npm][npm-img]][npm]
 [![license][license-img]][license]
-[![travis][travis-img]][travis]
 
 [license]: https://opensource.org/licenses/MIT
 [license-img]: https://img.shields.io/badge/License-MIT-brightgreen.svg
@@ -80,6 +79,8 @@ npm info "arui-presets-lint@latest" peerDependencies
 coverage
 ```
 
+Для запуска eslint рекомендуется использовать флаг [--max-warnings](https://eslint.org/docs/2.0.0/user-guide/command-line-interface#-max-warnings), который позволяет ограничить количество возникающих предупреждений.
+
 ## Конфигурация `husky` и `lint-staged`:
 
 ```json
@@ -96,6 +97,7 @@ coverage
     }
 }
 ```
+В lint-staged так же рекомендуется добавить запуск юнит-тестов, например, `yarn jest --findRelatedTests`
 
 ## Итоговая конфигурация линтеров:
 
@@ -144,7 +146,7 @@ https://prettier.io/docs/en/webstorm.html#using-prettier-with-eslint
 ```
 The MIT License (MIT)
 
-Copyright (c) 2020 Alfa-Bank
+Copyright (c) 2021 Alfa-Bank
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
