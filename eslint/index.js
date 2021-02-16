@@ -1,7 +1,8 @@
 module.exports = {
     parser: '@typescript-eslint/parser',
-    extends: ['airbnb', 'airbnb/hooks', 'plugin:@typescript-eslint/recommended'],
+    extends: ['airbnb-typescript', 'airbnb/hooks', 'plugin:@typescript-eslint/recommended'],
     parserOptions: {
+        project: './tsconfig.json',
         ecmaVersion: 2018,
         sourceType: 'module',
         ecmaFeatures: {
@@ -18,6 +19,7 @@ module.exports = {
         'import',
         'react',
         'cypress',
+        'simple-import-sort',
         'dirnames',
         'unicorn',
     ],
@@ -35,10 +37,16 @@ module.exports = {
         'comma-style': ['warn', 'last'],
         'computed-property-spacing': ['warn', 'never'],
         'func-call-spacing': ['warn', 'never'],
-        indent: ['warn', 4],
+        indent: ['warn', 4, { SwitchCase: 1 }],
         'key-spacing': ['warn'],
         'no-trailing-spaces': ['warn'],
         'no-whitespace-before-property': ['warn'],
+        'padding-line-between-statements': [
+            'warn',
+            { blankLine: 'always', prev: ['const', 'let', 'var'], next: '*' },
+            { blankLine: 'always', prev: '*', next: 'return' },
+            { blankLine: 'any', prev: ['const', 'let', 'var'], next: ['const', 'let', 'var'] },
+        ],
         'quote-props': ['warn', 'as-needed'],
         semi: ['warn'],
         'semi-spacing': ['warn'],
@@ -88,18 +96,27 @@ module.exports = {
         'react/prefer-stateless-function': 'off',
         'react/destructuring-assignment': 'off',
         'react/jsx-filename-extension': [1, { extensions: ['.jsx', '.tsx'] }],
+        'react/jsx-one-expression-per-line': 'off',
 
         // A11Y
         'jsx-a11y/anchor-is-valid': ['warn', { aspects: ['invalidHref'] }],
-        'jsx-a11y/label-has-for': ['error', { components: ['label'], allowChildren: true }],
+        'jsx-a11y/label-has-associated-control': [
+            'error',
+            { labelComponents: ['label'], assert: 'either' },
+        ],
 
         // typescript
+        '@typescript-eslint/indent': ['warn', 4, {
+            SwitchCase: 1,
+            ignoredNodes: ['TSTypeParameterInstantiation'],
+        },
+        ],
+        '@typescript-eslint/explicit-module-boundary-types': 'off',
         '@typescript-eslint/explicit-function-return-type': 'off',
         '@typescript-eslint/array-type': [
             'error',
             { default: 'array-simple', readonly: 'array-simple' },
         ],
-        '@typescript-eslint/class-name-casing': 'error',
         '@typescript-eslint/type-annotation-spacing': 'error',
         '@typescript-eslint/member-delimiter-style': 'error',
         '@typescript-eslint/consistent-type-assertions': 'error',
@@ -116,9 +133,16 @@ module.exports = {
             'error',
             { devDependencies: ['**/*.{stories,test,tests,spec}.{js,jsx,ts,tsx}'] },
         ],
+        'import/no-cycle': 'off',
         'import/prefer-default-export': 'off',
         'import/no-unresolved': 'off',
         'import/extensions': 'off',
+        'import/no-useless-path-segments': [
+            'error',
+            {
+                noUselessIndex: true,
+            },
+        ],
         'dirnames/match-kebab-case': 'error',
         'unicorn/filename-case': [
             'error',
@@ -126,10 +150,28 @@ module.exports = {
                 case: 'kebabCase',
             },
         ],
-        'import/no-useless-path-segments': [
-            'error',
+        'simple-import-sort/sort': [
+            'warn',
             {
-                noUselessIndex: true,
+                groups: [
+                    // Node.js builtins. You could also generate this regex if you use a `.js` config.
+                    // For example: `^(${require("module").builtinModules.join("|")})(/|$)`
+                    [
+                        '^(assert|buffer|child_process|cluster|console|constants|crypto|dgram|dns|domain|events|fs|http|https|module|net|os|path|punycode|querystring|readline|repl|stream|string_decoder|sys|timers|tls|tty|url|util|vm|zlib|freelist|v8|process|async_hooks|http2|perf_hooks)(/.*|$)',
+                    ],
+                    // Packages. `react` related packages come first.
+                    ['^react', '^redux', '^@?\\w'],
+                    // Components.
+                    ['@alfalab/*', '^arui-(feather|private)(/?.*|$)'],
+                    // Root path for project
+                    ['^#'],
+                    // Parent imports. Put `..` last.
+                    ['^\\.\\.(?!/?$)', '^\\.\\./?$'],
+                    // Other relative imports. Put same-folder imports and `.` last.
+                    ['^\\./(?=.*/)(?!/?$)', '^\\.(?!/?$)', '^\\./?$'],
+                    // Style imports.
+                    ['^.+\\.s?css$'],
+                ],
             },
         ],
     },

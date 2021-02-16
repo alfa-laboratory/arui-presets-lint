@@ -14,6 +14,7 @@ function addTypedObjectToCache<Type, Cache extends CacheHostGeneric<Type>>(
     cache: Cache,
 ): Cache {
     cache.save(obj);
+
     return cache;
 }
 
@@ -32,3 +33,10 @@ class SuperCache<T> implements CacheHostGeneric<T> {
 const cache = new SuperCache<number>();
 
 addTypedObjectToCache(123, cache);
+
+type PickedCacheHost = Required<
+    Pick<
+        CacheHostGeneric<string>,
+        'save'
+    >
+>;
