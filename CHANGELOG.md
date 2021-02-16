@@ -1,3 +1,20 @@
+# [5.6.0](https://github.com/alfa-laboratory/arui-presets-lint/compare/v5.5.0...v5.6.0) (2021-02-16)
+
+
+### Bug Fixes
+
+* fix yarn audit prototype pollution ([ee38bac](https://github.com/alfa-laboratory/arui-presets-lint/commit/ee38bac939329e261593153af4e28f5039503ac8))
+
+
+### Features
+
+* add eslint rule for check filenames ([07b48b5](https://github.com/alfa-laboratory/arui-presets-lint/commit/07b48b5e29d3fac6115fb84d10e982ea71729af1))
+* update eslint-plugin-dirnames version ([2a14bb2](https://github.com/alfa-laboratory/arui-presets-lint/commit/2a14bb23d2d80283222e7d368607b056a8764cd6))
+* update lint for check  filenames & dirnames ([434b48a](https://github.com/alfa-laboratory/arui-presets-lint/commit/434b48acc94e5c15e2e1b15cce3b1e8df13c7cf7))
+* update package.json ([e39da16](https://github.com/alfa-laboratory/arui-presets-lint/commit/e39da1640c3176e6116f56a082dd41c81c50755b))
+* update yarn.lock ([3f708aa](https://github.com/alfa-laboratory/arui-presets-lint/commit/3f708aa264ff18eb746deb848285cabf105f4638))
+* update yarn.lock ([1abc126](https://github.com/alfa-laboratory/arui-presets-lint/commit/1abc126673b37764509bbeb16905fa263dfac324))
+
 # [5.5.0](https://github.com/alfa-laboratory/arui-presets-lint/compare/v5.4.1...v5.5.0) (2021-02-12)
 
 
