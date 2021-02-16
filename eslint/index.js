@@ -20,6 +20,8 @@ module.exports = {
         'react',
         'cypress',
         'simple-import-sort',
+        'dirnames',
+        'unicorn',
     ],
     settings: {
         'import/resolver': {
@@ -139,6 +141,13 @@ module.exports = {
             'error',
             {
                 noUselessIndex: true,
+            },
+        ],
+        'dirnames/match-kebab-case': 'error',
+        'unicorn/filename-case': [
+            'error',
+            {
+                case: 'kebabCase',
             },
         ],
         'simple-import-sort/sort': [
