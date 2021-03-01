@@ -66,14 +66,7 @@ module.exports = {
         'no-plusplus': ['error', { allowForLoopAfterthoughts: true }],
         'no-negated-condition': 'warn',
         'default-case': 'off',
-        'no-use-before-define': [
-            'error',
-            {
-                functions: false,
-                classes: true,
-                variables: true,
-            },
-        ],
+        'no-use-before-define': 'off',
 
         // code smell detection
         complexity: ['warn', 20],
