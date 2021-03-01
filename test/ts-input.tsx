@@ -35,3 +35,8 @@ const cache = new SuperCache<number>();
 addTypedObjectToCache(123, cache);
 
 export type PickedCacheHost = Required<Pick<CacheHostGeneric<string>, 'save'>>;
+
+export enum STATUS {
+    NONE = '0',
+    SUCCESS = '1',
+}

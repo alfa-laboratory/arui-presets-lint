@@ -56,6 +56,7 @@ module.exports = {
         'space-infix-ops': ['warn'],
         'space-unary-ops': ['warn'],
         'switch-colon-spacing': ['warn'],
+        'no-shadow': 'off',
         // This rules conflicts with prettier formatter
         'operator-linebreak': 'off',
         'implicit-arrow-linebreak': 'off',
@@ -73,9 +74,6 @@ module.exports = {
                 variables: true,
             },
         ],
-
-        // rules should be transformed to errors
-        'no-shadow': 'warn',
 
         // code smell detection
         complexity: ['warn', 20],
@@ -125,6 +123,7 @@ module.exports = {
         '@typescript-eslint/consistent-type-assertions': 'error',
         '@typescript-eslint/no-array-constructor': 'error',
         '@typescript-eslint/no-empty-interface': 'error',
+        '@typescript-eslint/no-shadow': 'warn',
         '@typescript-eslint/no-unused-vars': ['error', { ignoreRestSiblings: true }],
         '@typescript-eslint/no-use-before-define': [
             'error',
