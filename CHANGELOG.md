@@ -1,3 +1,11 @@
+# [5.7.0](https://github.com/alfa-laboratory/arui-presets-lint/compare/v5.6.0...v5.7.0) (2021-03-10)
+
+
+### Features
+
+* **eslint:** add 'no-shadow' ts rule ([5817957](https://github.com/alfa-laboratory/arui-presets-lint/commit/5817957cbaa656f868bf67f4ec4b33e69b78d233))
+* **eslint:** off eslint 'no-use-before-define' ([092093b](https://github.com/alfa-laboratory/arui-presets-lint/commit/092093bfd39944c8da7c241397456cafdd49b765))
+
 # [5.6.0](https://github.com/alfa-laboratory/arui-presets-lint/compare/v5.5.0...v5.6.0) (2021-02-16)
 
 
