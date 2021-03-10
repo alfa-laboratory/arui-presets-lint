@@ -56,6 +56,7 @@ module.exports = {
         'space-infix-ops': ['warn'],
         'space-unary-ops': ['warn'],
         'switch-colon-spacing': ['warn'],
+        'no-shadow': 'off',
         // This rules conflicts with prettier formatter
         'operator-linebreak': 'off',
         'implicit-arrow-linebreak': 'off',
@@ -65,17 +66,7 @@ module.exports = {
         'no-plusplus': ['error', { allowForLoopAfterthoughts: true }],
         'no-negated-condition': 'warn',
         'default-case': 'off',
-        'no-use-before-define': [
-            'error',
-            {
-                functions: false,
-                classes: true,
-                variables: true,
-            },
-        ],
-
-        // rules should be transformed to errors
-        'no-shadow': 'warn',
+        'no-use-before-define': 'off',
 
         // code smell detection
         complexity: ['warn', 20],
@@ -106,10 +97,13 @@ module.exports = {
         ],
 
         // typescript
-        '@typescript-eslint/indent': ['warn', 4, {
-            SwitchCase: 1,
-            ignoredNodes: ['TSTypeParameterInstantiation'],
-        },
+        '@typescript-eslint/indent': [
+            'warn',
+            4,
+            {
+                SwitchCase: 1,
+                ignoredNodes: ['TSTypeParameterInstantiation'],
+            },
         ],
         '@typescript-eslint/explicit-module-boundary-types': 'off',
         '@typescript-eslint/explicit-function-return-type': 'off',
@@ -122,6 +116,7 @@ module.exports = {
         '@typescript-eslint/consistent-type-assertions': 'error',
         '@typescript-eslint/no-array-constructor': 'error',
         '@typescript-eslint/no-empty-interface': 'error',
+        '@typescript-eslint/no-shadow': 'warn',
         '@typescript-eslint/no-unused-vars': ['error', { ignoreRestSiblings: true }],
         '@typescript-eslint/no-use-before-define': [
             'error',
