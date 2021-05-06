@@ -71,6 +71,19 @@ module.exports = {
         // code smell detection
         complexity: ['warn', 20],
         'max-nested-callbacks': 'warn',
+        'no-restricted-properties': [
+            'error',
+            {
+                object: 'it',
+                property: 'only',
+                message: "Don't you forget to remove 'only' from this test?",
+            },
+            {
+                object: 'describe',
+                property: 'only',
+                message: "Don't you forget to remove 'only' from this test?",
+            },
+        ],
 
         // React
         'react/jsx-indent': ['warn', 4],

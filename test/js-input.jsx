@@ -42,3 +42,8 @@ function definedAfterUsage() {
 }
 
 export const element = <div style={ { color: 'black' } } />;
+
+const it = () => {};
+
+// eslint-disable-next-line no-restricted-properties
+it.only('this is a test');
