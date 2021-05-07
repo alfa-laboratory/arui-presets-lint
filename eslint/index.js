@@ -83,6 +83,16 @@ module.exports = {
                 property: 'only',
                 message: "Don't you forget to remove 'only' from this test?",
             },
+            {
+                object: 'context',
+                property: 'only',
+                message: "Don't you forget to remove 'only' from this test?",
+            },
+            {
+                object: 'test',
+                property: 'only',
+                message: "Don't you forget to remove 'only' from this test?",
+            },
         ],
 
         // React
