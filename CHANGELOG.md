@@ -1,3 +1,11 @@
+# [5.8.0](https://github.com/alfa-laboratory/arui-presets-lint/compare/v5.7.0...v5.8.0) (2021-05-14)
+
+
+### Features
+
+* **eslint:** forbid to use context.only and test.only ([cfae8a5](https://github.com/alfa-laboratory/arui-presets-lint/commit/cfae8a5d7f42faacf24d0fbf716d2c3454ab6f65))
+* **eslint:** forbid to use it.only and describe.only ([dd83d79](https://github.com/alfa-laboratory/arui-presets-lint/commit/dd83d79417ca89b2e1534cbe5617832d9eac5f47))
+
 # [5.7.0](https://github.com/alfa-laboratory/arui-presets-lint/compare/v5.6.0...v5.7.0) (2021-03-10)
 
 
