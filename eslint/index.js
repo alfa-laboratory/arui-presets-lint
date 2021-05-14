@@ -76,22 +76,22 @@ module.exports = {
             {
                 object: 'it',
                 property: 'only',
-                message: "Don't you forget to remove 'only' from this test?",
+                message: "Did you forget to remove 'only' from this test?",
             },
             {
                 object: 'describe',
                 property: 'only',
-                message: "Don't you forget to remove 'only' from this test?",
+                message: "Did you forget to remove 'only' from this test?",
             },
             {
                 object: 'context',
                 property: 'only',
-                message: "Don't you forget to remove 'only' from this test?",
+                message: "Did you forget to remove 'only' from this test?",
             },
             {
                 object: 'test',
                 property: 'only',
-                message: "Don't you forget to remove 'only' from this test?",
+                message: "Did you forget to remove 'only' from this test?",
             },
         ],
 
