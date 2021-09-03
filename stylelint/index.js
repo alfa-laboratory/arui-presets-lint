@@ -52,6 +52,14 @@ module.exports = {
         'media-feature-colon-space-before': 'never',
         'media-feature-parentheses-space-inside': 'never',
         'at-rule-semicolon-space-before': 'never',
+        'stylelint-core-vars/use-vars': true,
+        'stylelint-core-vars/use-mixins': true,
+        'stylelint-core-vars/use-one-of-vars': [true, { severity: 'warning' }],
+        'stylelint-core-vars/use-one-of-mixins': [true, { severity: 'warning' }],
+        'stylelint-core-vars/do-not-use-dark-colors': [true, { severity: 'warning' }],
     },
-    plugins: [require.resolve('arui-cssvars/lint/stylelint')],
+    plugins: [
+        require.resolve('@alfalab/stylelint-core-vars'),
+        require.resolve('arui-cssvars/lint/stylelint'),
+    ],
 };
