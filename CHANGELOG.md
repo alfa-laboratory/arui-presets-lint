@@ -1,3 +1,10 @@
+# [5.9.0](https://github.com/alfa-laboratory/arui-presets-lint/compare/v5.8.0...v5.9.0) (2021-09-03)
+
+
+### Features
+
+* **stylelint:** add stylelint-core-vars ([fca461d](https://github.com/alfa-laboratory/arui-presets-lint/commit/fca461dc5a2c95afb6d0be4af1a395fb0c270ecb))
+
 # [5.8.0](https://github.com/alfa-laboratory/arui-presets-lint/compare/v5.7.0...v5.8.0) (2021-05-14)
 
 
