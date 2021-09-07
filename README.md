@@ -64,7 +64,8 @@ npm info "arui-presets-lint@latest" peerDependencies
     "scripts": {
         "lint:css": "stylelint ./src/**/*.css",
         "lint:scripts": "eslint \"**/*.{js,jsx,ts,tsx}\" --ext .js,.jsx,.ts,.tsx",
-        "lint": "yarn lint:css && yarn lint:scripts",
+        "check-format": "prettier-eslint --list-different $INIT_CWD/{config,src}/**/*.{ts,tsx,js,jsx,css}",
+        "lint": "yarn lint:css && yarn lint:scripts && yarn check-format",
         "format": "prettier-eslint --write $INIT_CWD/{config,src}/**/*.{ts,tsx,js,jsx,css}"
     }
 }
@@ -106,7 +107,8 @@ coverage
     "scripts": {
         "lint:css": "stylelint ./src/**/*.css",
         "lint:scripts": "eslint \"**/*.{js,jsx,ts,tsx}\" --ext .js,.jsx,.ts,.tsx",
-        "lint": "yarn lint:css && yarn lint:scripts",
+        "check-format": "prettier-eslint --list-different $INIT_CWD/{config,src}/**/*.{ts,tsx,js,jsx,css}",
+        "lint": "yarn lint:css && yarn lint:scripts && yarn check-format",
         "format": "prettier-eslint --write $INIT_CWD/{config,src}/**/*.{ts,tsx,js,jsx,css}"
     },
     "lint-staged": {
