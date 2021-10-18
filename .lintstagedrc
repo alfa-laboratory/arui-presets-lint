@@ -1,0 +1,10 @@
+{
+    "**/*.{js,jsx,ts,tsx,css}": [
+        "prettier-eslint --write",
+        "eslint"
+    ],
+    "stylelint/*.js": [
+        "prettier-eslint --write",
+        "yarn test:stylelint"
+    ]
+}

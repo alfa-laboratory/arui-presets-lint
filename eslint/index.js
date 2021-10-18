@@ -1,4 +1,5 @@
 module.exports = {
+    root: true,
     parser: '@typescript-eslint/parser',
     extends: ['airbnb-typescript', 'airbnb/hooks', 'plugin:@typescript-eslint/recommended'],
     parserOptions: {
@@ -22,12 +23,16 @@ module.exports = {
         'simple-import-sort',
         'dirnames',
         'unicorn',
+        'jsx-a11y',
     ],
     settings: {
         'import/resolver': {
             node: {
                 extensions: ['.ts', '.tsx', '.js', '.jsx'],
             },
+        },
+        react: {
+            version: 'detect',
         },
     },
     rules: {
