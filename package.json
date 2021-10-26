@@ -33,7 +33,7 @@
         "eslint-plugin-react-hooks": "^4.1.0",
         "eslint-plugin-simple-import-sort": "^5.0.3",
         "eslint-plugin-unicorn": "^37.0.1",
-        "husky": "^7.0.2",
+        "husky": "^4.2.5",
         "lint-staged": "^11.2.3",
         "prettier": "^2.4.1",
         "prettier-eslint": "^13.0.0",
@@ -62,7 +62,7 @@
         "eslint-plugin-react-hooks": "^4.1.0",
         "eslint-plugin-simple-import-sort": "5.0.3",
         "eslint-plugin-unicorn": "37.0.1",
-        "husky": "^7.0.0",
+        "husky": "4.2.5",
         "lint-staged": "11.2.3",
         "prettier": "2.4.1",
         "prettier-eslint": "13.0.0",
@@ -78,8 +78,7 @@
         "test": "yarn test:eslint && yarn test:stylelint",
         "test:eslint": "eslint \"./test/**/*.{ts,tsx,js,jsx}\"",
         "test:stylelint": "node ./test/stylelint-test.js",
-        "format": "prettier-eslint --write $INIT_CWD/{eslint,stylelint,test,commitlint}/**/*.{ts,tsx,js,jsx,css}",
-        "prepare": "husky install"
+        "format": "prettier-eslint --write $INIT_CWD/{eslint,stylelint,test,commitlint}/**/*.{ts,tsx,js,jsx,css}"
     },
     "lint-staged": {
         "**/*.{js,jsx,ts,tsx,css}": [
@@ -108,6 +107,12 @@
     },
     "bugs": {
         "url": "https://github.com/alfa-laboratory/arui-presets-lint/issues"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "yarn test",
+            "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+        }
     },
     "prettier": "./prettier.js"
 }
