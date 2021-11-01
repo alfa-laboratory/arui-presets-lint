@@ -22,12 +22,16 @@ module.exports = {
         'simple-import-sort',
         'dirnames',
         'unicorn',
+        'jsx-a11y',
     ],
     settings: {
         'import/resolver': {
             node: {
                 extensions: ['.ts', '.tsx', '.js', '.jsx'],
             },
+        },
+        react: {
+            version: 'detect',
         },
     },
     rules: {
