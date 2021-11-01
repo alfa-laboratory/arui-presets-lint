@@ -1,3 +1,18 @@
+# [5.10.0](https://github.com/alfa-laboratory/arui-presets-lint/compare/v5.9.0...v5.10.0) (2021-11-01)
+
+
+### Bug Fixes
+
+* delete extra comment ([fec77cc](https://github.com/alfa-laboratory/arui-presets-lint/commit/fec77ccd5bb41cc3641729ea5fead768d88f141c))
+* remarks from pr ([fa6f23f](https://github.com/alfa-laboratory/arui-presets-lint/commit/fa6f23f0ba86d12c3b24c8e65d8c8e872d234dad))
+* return old husky ([95b8201](https://github.com/alfa-laboratory/arui-presets-lint/commit/95b82016adbba11e75585b27b4e1966beb77f44c))
+* update yarnlock ([d8885f7](https://github.com/alfa-laboratory/arui-presets-lint/commit/d8885f755e10ece1c2c77e513a6b34e393feb81f))
+
+
+### Features
+
+* up libs ([08d4e78](https://github.com/alfa-laboratory/arui-presets-lint/commit/08d4e78024ad8b99b04d9e6e7848dd5d3056b7ad))
+
 # [5.9.0](https://github.com/alfa-laboratory/arui-presets-lint/compare/v5.8.0...v5.9.0) (2021-09-03)
 
 
