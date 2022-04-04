@@ -141,6 +141,10 @@ module.exports = {
         '@typescript-eslint/type-annotation-spacing': 'error',
         '@typescript-eslint/member-delimiter-style': 'error',
         '@typescript-eslint/consistent-type-assertions': 'error',
+        '@typescript-eslint/naming-convention': [
+            'error',
+            { selector: 'enumMember', format: ['PascalCase'] },
+        ],
         '@typescript-eslint/no-array-constructor': 'error',
         '@typescript-eslint/no-empty-interface': 'error',
         '@typescript-eslint/no-shadow': 'warn',
