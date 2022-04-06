@@ -172,7 +172,7 @@ module.exports = {
                 case: 'kebabCase',
             },
         ],
-        'simple-import-sort/sort': [
+        'simple-import-sort/imports': [
             'warn',
             {
                 groups: [
